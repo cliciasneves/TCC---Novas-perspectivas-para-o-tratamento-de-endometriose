@@ -22,6 +22,7 @@
 \usepackage{graphicx} % support the \includegraphics command and options
 
 \usepackage{titlesec}
+\usepackage{titling}
 \usepackage{lipsum}
 
 \usepackage{indentfirst}
@@ -82,8 +83,8 @@
 
 %%% The "real" document content comes below...
 
-%\title{Novas perspectivas para o diagnóstico clínico da endometriose}
-%\author{Clicia Santos Neves}
+\title{Novas perspectivas para o diagnóstico clínico da endometriose}
+\author{Clicia Santos Neves}
 %\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
 \setcounter{secnumdepth}{5}
@@ -108,7 +109,7 @@ CURSO DE BIOMEDICINA}
 \vspace{2.5cm}
 
 \begin{center}
-\MakeUppercase{\textbf{Clicia Santos Neves}}
+\MakeUppercase{\theauthor}
 \end{center}
 
 \vspace{3.5cm}
@@ -142,7 +143,7 @@ Trabalho de conclusão do curso apresentado ao Centro Universitário Hermínio d
 
 \vspace{2.5cm}
 
-Clicia santos Neves
+\theauthor
 
 \vspace{2.5cm}
 
@@ -165,7 +166,7 @@ Orientador: Rômulo Medina Mattos
 
 
 \begin{center}
-\MakeUppercase{\textbf{Clicia Santos Neves}}
+\MakeUppercase{\theauthor}
 \end{center}
 
 \vspace{2.0cm}
@@ -196,10 +197,45 @@ Aprovada em julho de 2015 por:
 \MakeUppercase{\textbf{Resumo}}
 \end{center}
 
-\newpage
-\begin{center}
-\MakeUppercase{\textbf{Abstract}}
-\end{center}
+A endometriose é uma doença benigna, enigmática e controversa. E
+caracteriza-se pela presença de tecido semelhante ao endométrio ativo
+e não neoplásico fora da cavidade uterina, assim induzindo uma reação
+inflamatória crônica.
+
+% Alguns autores?
+Estima-se que cerca de 15\% das mulheres em idade reprodutiva são
+afetadas pela endometriose, cujos variados sintomas diminuem a
+qualidade de vida da paciente. É, portanto, considerada uma doença de
+custo humano e financeiro grande.  Tanto por seus efeitos na vida da
+paciente como no seu impacto profissional e com gastos médicos.
+Assim, tornando-se um problema de saúde pública mundial.
+
+% Quem acredita?
+Porém, sua etiologia e etiopatogenia são ainda controversos. Mas
+acredita-se que múltiplos fatores estejam envolvidos, sendo os mais
+predominantes: os genéticos, ambientais, angiogênicos, endócrinos e
+os processos embrionários.
+
+Os implantes endometriais se apresentam de várias formas. Podendo ser
+superficial, intermediária, profunda ou infiltrativa. Entretanto, a
+sintomatologia não corresponde a gravidade da doença. 
+
+O diagnóstico definitivo utilizado atualmente é através da
+laparoscopia ou laparotomia e associados a histologia de
+confirmação. Porém, esta é uma abordagem cirúrgica invasiva e de alto
+custo. Sendo assim, outras técnicas de diagnóstico estão sendo
+empregadas para detectar os focos das lesões, como: a Ultrassonografia
+e a Ressonância Nuclear Magnética.
+
+Apesar disto, a endometriose ainda não tem cura e seu tratamento é
+apenas paliativo, uma vez que é uma doença com reincidia comprovada.
+
+Sendo assim, o objetivo deste trabalho é o de realizar uma descrição
+da literatura com o intuito de um melhor entendimento da doença, seu
+diagnóstico convencional e a busca para abordagens de diagnósticos
+precoce e minimamente invasivos.
+
+\newpage\MakeUppercase{\textbf{Abstract}}
 
 
 
@@ -212,14 +248,6 @@ Aprovada em julho de 2015 por:
 \newpage
 
 \tableofcontents
-
-
-
-
-
-
-
-
 
 
 \newpage
@@ -236,350 +264,758 @@ Aprovada em julho de 2015 por:
 
 
 \section{Introdução}
-A endometriose é uma doença benigna, que acomete mulheres em idade reprodutiva e é causada pela presença do tecido do endométrio fora do revestimento do útero. Ela pode ser encontrada em qualquer local da cavidade abdominal, com maior frequência na pelve, nas estruturas próximas ao útero e raramente acomete outras regiões mais distantes como pulmão,tórax e pericárdio (King, 2007) .
 
-Raramente a endometriose pode apresentar características semelhantes a tumores, como a invasão e a metástase (Robins e Cotran, 2010).
+A endometriose é uma doença benigna que acomete mulheres em idade
+reprodutiva e é causada pela presença do tecido do endométrio fora do
+revestimento do útero e pode ser encontrada em qualquer local da
+cavidade abdominal. Porém, tem maior incidência na pelve, nas
+estruturas próximas ao útero e raramente acomete outras regiões mais
+distantes como pulmão, tórax e pericárdio (King, 2007). A endometriose
+pode, também, apresentar características semelhantes a tumores, como a
+invasão e a metástase, entretanto esse tipo de ocorrência é
+rara. (Robins e Cotran, 2010).
 
-Acredita-se que cerca de 10 a 15\%  das mulheres em idade reprodutiva sejam afetadas por esta doença e que o diagnóstico acontece principalmente em mulheres com dores pélvicas e inférteis (Matta e Muller, 2005).
-Segundo Cox e Cols, 2002 a endometriose lidera as causas de infertilidade entre mulheres com idade acima de 25 anos, com isso pode ser possível que aproximadamente 40\% das mulheres inférteis tenham algum grau de endometriose .
+% Quem acredita?
+Cerca de 10\% a 15\% das mulheres em idade reprodutiva são afetadas
+por esta doença. Seu diagnóstico é predominante em mulheres com dores
+pélvicas ou inférteis (Matta e Muller, 2005).  Inclusive, a
+endometriose lidera as causas de infertilidade entre mulheres com
+idade acima de 25 anos (Cox e Cols, 2002) e é possível que até 40\%
+das mulheres inférteis tenham algum grau de endometriose.
 
-Alguns fatores importantes devem ser levados em consideração para a determinação do fenótipo da doença, como a quantidade do fluxo menstrual, fatores genéticos e ambientais (Viganò e Cols, 2012).
+Os fatores que determinam o fenótipo da doença são diversos, como: a
+quantidade do fluxo menstrual, fatores genéticos e ambientais (Viganò
+e Cols, 2012). E, apesar de ser uma das doenças mais investigadas
+atualmente, a endometriose ainda é de etiopatogenia desconhecida e seu
+diagnóstico bastante controverso. Também, por apresentar sintomas
+clínicos como dor pélvica crônica, dismenorreia, dispareunia e
+subfertilidade, torna seu diagnóstico mais difícil porque, em geral,
+mulheres com uma ou mais dessas condições só procuram ajuda médica
+quando já se tem a doença estabelecida (Verkauf, 1897 ). 
 
-Apesar de ser uma das doenças mais investigadas atualmente, a endometriose ainda é de etiopatogenia desconhecida e seu diagnóstico bastante controverso.  Por apresentar sintomas clínicos como dor pélvica crônica, dismenorreia, dispareunia e subfertilidade torna se dificil seu diagnóstico , pois as mulheres com tal condição só procuram ajuda médica quando já se tem a doença estabelecida (Verkauf, 1897 ).Atualmente, não existe um tratamento padrão para endometriose, portanto, o tratamento é individualizado para cada paciente.
+Atualmente, não existe cura para a endometriose e nem um tratamento
+padrão. Portanto, seu tratamento é individualizado para cada paciente
+e o diagnóstico precoce é muito importante para evitar o agravamento
+da doença e garantir uma qualidade de vida melhor.  Todavia, uma
+pesquisa realizada por (Kelechi e Cols, 2009) verificou que há uma
+demora de cerca de sete anos entre o aparecimento dos primeiros
+sintomas até um diagnóstico preciso.
 
-O diagnóstico precoce da endometriose é muito importante para garantir uma qualidade de vida melhor para a paciente e evitar o agravamento da doença. Porém uma pesquisa realizada por (Kelechi e Cols, 2009) verificou que há uma demora de cerca de sete  anos entre o aparecimento dos primeiros sintomas até um diagnóstico preciso.
+Para um diagnóstico definitivo é necessário uma visualização direta
+das lesões por laparoscopia ou laparotomia combinado com a histologia
+de confirmação. Entretanto, muitas mulheres deixam de fazer esse exame
+por considerá-la uma abordagem invasiva ou desnecessária (Kennedy e
+Cols 2005).  Sendo assim, afim de ter maior aceitação ao procedimento
+diagnóstico, outras técnicas tem sido utilizadas para a visualização
+das lesões, como a Utrassom Transvaginal e a Ressonância Magnética.
 
-Para se ter um diagnóstico definitivo é preciso uma visualização direta das lesões por laparoscopia ou laparotomia combinado com a histologia de confirmação. Entretanto muitas mulheres deixam de fazer esse exame por considerar uma abordagem invasiva e desnecessária (Kennedy e Cols 2005).
-Sendo assim outras técnicas podem são utilizadas para a visualização das lesões como a Utrassom Transvaginal e a Ressonância Magnética .
-
-Atualmente não há consenso médico sobre as causas que levam o tecido endometrial a se desenvolver em outros locais a de sua origem . Entretanto, diversos estudos sobre as características das mulheres que têm a doença ajudam a medicina a se aproximar de maiores respostas permitindo identificar sub-tipos de endometriose. Desta forma, o presente trabalho pretende expor as formas de diagnóstico mais utilizadas atualmete e discutir os recentes diagnósticos para a endometriose.
+Como ainda não há consenso médico sobre as causas que levam o tecido
+endometrial a se desenvolver em outros locais ao de sua origem, sua
+cura é desconhecida. Entretanto, diversos estudos recentes sobre a
+doença, focando nas características das mulheres com a doença ajudaram
+a medicina a abrir novas frentes de conhecimento e permitiu a
+classificação de sub-tipos de endometriose. E, assim, o presente
+trabalho pretende expor as formas de diagnóstico mais utilizadas
+atualmente e compará-las com os recentes diagnósticos para a
+endometriose.
 
 \section{Objetivo geral}
 
-A endometriose é uma das doenças ginecológicas mais investigadas atualmente, porém ela ainda é uma doença misteriosa, sem cura e pouco conhecida e compreendida pelas mulheres.
-Por ter um diagnóstico bastante controverso sua incidência varia muito por isso não há uma forma de prevenção para a doença.
+Apesar de a endometriose ser vastamente investigada, ainda sabe-se
+muito pouco dela. Sem cura e com diagnóstico bastante controverso,
+agrava-se pela sua variação de incidência que impossibilita ainda um
+método de prevenção. Também, o desconhecimento pelas mulheres desta
+doença contribui para o diagnóstico tardio e consequente perda de
+qualidade de vida.
 
-Visando avaliar seu difícil diagnóstico, este estudo tem o objetivo de expor um melhor entendimento desta patologia onde discutiremos as formas de diagnóstico clínico que são utilizadas atualmente e as novas pesquisas para uma visão mais ampla sobre a endometriose na busca por um diagnóstico precoce e minimamente invasivo .
+Visando avaliar seu difícil diagnóstico, este estudo tem o objetivo de
+expor um melhor entendimento desta patologia onde discutiremos as
+formas de diagnóstico clínico que são utilizadas atualmente e as novas
+pesquisas para uma visão mais ampla sobre a endometriose na busca por
+um diagnóstico precoce e minimamente invasivo.
 
 \subsection{Objetivos específicos}
 
-Descrever a fisiopatologia da endometriose.
+Os objetivos específicos são os seguintes:
 
-Demonstrar atuais formas de diagnósticos e tratamento.
+\begin{itemize}
+\item Descrever a fisiopatologia da endometriose.
+\item Demonstrar atuais formas de diagnósticos e tratamento.
+\item Discutir novas perspectivas para um diagnóstico precoce e menos
+invasivos.
+\end{itemize}
 
-Discutir novas perspectivas para um diagnóstico precoce e menos invasivos.
 \section{Revisão bibliográfica}
 
 \subsection{Aparelho Reprodutor Feminino}
-O aparelho reprodutor feminino é um conjunto de órgãos muito importantes na vida da mulher pois eles são responsáveis pela reprodução, produção dos gametas e dos hormônios e preparação do endométrio para a fecundação e alojamento do embrião caso o óvulo seja fertilizado, caso a fecundação não ocorra o endométrio se descama e ocorre a menstruação. É composto por vários órgãos cujo os mais importantes são: os ovários, a tuba uterina, útero e a vagina (Guyton e Hall.,2006).
+
+O aparelho reprodutor feminino é o conjunto de órgãos responsáveis
+pela reprodução, produção dos gametas, hormônios, preparação do
+endométrio para a fecundação, alojamento do embrião caso o óvulo seja
+fertilizado e à menstruação em caso contrário. Ele é de suma
+importância já que é responsável pela perpetuação da espécie através
+da reprodução sexuada. Os órgãos mais importantes que compõe o
+aparelho reprodutor feminino são: os ovários,s a tuba uterina, útero e
+a vagina (Guyton e Hall., 2006). Vide figura~\ref{aparelho feminino}
+na página~\pageref{aparelho feminino}.
 
 
 \begin{figure}[h!]
-%\centering
-\includegraphics[width=16cm]{utero.jpg}
+\centering
+\includegraphics[width=10cm]{utero.jpg}
 \caption[Anatomia do sistema reprodutor feminino]{Anatomia do sistema reprodutor feminino (Disponível em Guyton e Hall,2006 pag. 1012)}
-%\label{Rotulo}
+\label{aparelho feminino}
 \end{figure}
 
-\subsection{útero}
+\subsection{Útero}
 
+Um equívoco comum é o de acreditar que o útero tem como única função
+abrigar o feto no período gestacional. Porém, ele também tem um papel
+fundamental no ciclo ovulatório e, por isso, é também muito importante
+no equilíbrio da vida da mulher.
 
+O útero é um órgão muscular e glandular. Possui uma cavidade interna e
+mede cerca de 8cm de comprimento, 5cm de largura e 3cm de
+espessura. Seu formato é semelhante a uma pêra invertida e está
+subdivido em três partes: fundo (região superior), corpo e colo (ou cérvix).
 
-Há quem acredite que o útero tem como função somente abrigar o feto no período gestacional. Porém já se sabe que esse órgão tem papel importante no ciclo ovulatório e é fundamental no equilíbrio da vida da mulher.
+A parede uterina é formada por três camadas: a mais externa
+constituída por mesotélio e tecido conjuntivo, o miométrio que é
+constituído de músculo liso e o endométrio ou mucosa uterina
+(Junqueira e Carneiro, 2008). O endométrio é um tecido vascularizado que
+reveste a parede interna do útero e tem como função acolher e nutrir o
+embrião na gravidez. Portanto, durante o período pré-puberal, o
+tecido endometrial permanece inativo. Ele é composto por glândulas e
+estroma e sofre alterações fisiológicas e morfológicas em resposta aos
+hormônios ovarianos estrogênio e progesterona durante o ciclo
+menstrual (Filho, 2011).  Desta forma, o útero passa por esse processo
+cíclico normalmente a cada trinta dias em mulheres com idade
+reprodutiva.
 
-O útero é um órgão muscular e glandular, possue uma cavidade interna e mede cerca de 8 cm de comprimento, 5 cm de largura e 3 cm de espessura . Seu formato é semelhante a uma pêra invertida e está subdividido em três partes: fundo (região bem acima), corpo e colo ou cérvix.  
-
-A parede uterina é formada por três camadas: a mais externa constituída por mesotélio e tecido conjuntivo, o miométrio que é constituído de músculo liso e o endométrio ou mucosa uterina (Junqueira e Carneiro, 2008). Endométrio é um tecido vascularizado que reveste a parede interna do útero e tem como função acolher e nutrir o embrião na gravidez, sendo assim durante o período pré -puberal o tecido endometrial permanece inativo. Ele é composto por glândulas e estroma e sofre alterações fisiológicas e morfológicas em resposta aos hormônios ovarianos estrogênio e progesterona durante o ciclo menstrual (Filho, 2011).
-Desta forma, o útero passa por esse processo cíclico normalmente a cada trinta dias em mulheres com idade reprodutiva.
-
-Há diversas teorias que tentam explicar como o endométrio vai parar fora do útero. Uma delas é que durante a menstruação células do endométrio invadem as trompas e vão parar em vários lugares do abdomem ( Robbins e Cotran, 2010 ).
-
+Há diversas teorias que tentam explicar como o endométrio vai parar
+fora do útero. Uma delas é que durante a menstruação células do
+endométrio invadem as trompas e com isso vão parar em vários lugares
+do abdome (Robbins e Cotran, 2010).
 
 \subsection{Ciclo menstrual}
 
 \begin{figure}[h!]
-%\centering
-\includegraphics[width=16cm]{ciclo.jpg}
-\caption[Alterações morfológicas e hormonais durante o ciclo menstrual]{ Alterações morfológicas e hormonais durante o ciclo menstrual ( disponível em ) } 
-%\label{Rotulo}
+\centering
+\includegraphics[width=10cm]{ciclo.jpg}
+\caption[Alterações morfológicas e hormonais durante o ciclo menstrual]{ Alterações morfológicas e hormonais durante o ciclo menstrual (disponível em) } 
+\label{ciclo menstrual}
 \end{figure} 
 
+Toda mulher, em seu estado fisiológico normal, em idade reprodutiva no
+período entre a menarca e a menopausa, sofre alterações cíclicas em
+seu sistema reprodutivo conhecido como ciclo menstrual. O ciclo
+menstrual causa alterações em diversas partes do corpo feminino
+incluindo mamas, útero, pele e ovários. Ele envolve um conjunto de
+reações químicas endócrinas que afetam aspectos biológicos e
+sociológicos como: a reprodução, sexualidade e fertilidade da
+mulher. Todo o ciclo dura, em média, 28 dias e se caracteriza pela
+secreção dos hormônios femininos que vão agir para a liberação do
+óvulo e preparação do endométrio uterino para a implantação do óvulo,
+caso seja fertilizado.
 
-Toda mulher em seu estado fisiológico normal em idade reprodutiva entre a menarca e a menopausa , sofre alterações cíclicas em seu sistema reprodutivo conhecido como ciclo menstrual. O ciclo menstrual causa alterações em diversas partes do corpo feminino incluindo mamas, útero, pele e ovários. Ele envolve um conjunto de reações quimicas endócrinas que afeta aspectos biológicos e sociológicos como a reprodução, sexualidade e fertilidade da mulher. Todo o ciclo dura em média 28 dias e se caracteriza pela secreção dos hormônios femininos que vão agir para a liberação do óvulo e preparação do endométrio uterino para a implantação do óvulo caso seja fertilizado.
-
-O sistema hormonal feminino (Figura 2) é seguido por três hierarquias de hormônios a serem liberados: O hormônio liberador de gonadotrofinas (GnRH) secretado pelo hipotálamo, o hormônio folículo estimulante (FSH) e o  hormônio luteinizante (LH) que serão liberados pela hipófise anterior em resposta à liberação do GnRH e por fim os hormônios ovarianos estrogênio e progesterona, ambos secretados pelos ovários em resposta à liberação do FSH e do LH (Guyton e Hall, 2006 ).
-
-O endométrio sofre modificações tanto histológicas quanto morfologicamente em resposta à liberação do estrogênio e da progesterona liberados pelos ovários durante o ciclo menstrual (Geraldo Brasileiro Filho , 2011). Essas mudanças que tem início a cada ciclo, tem a finalidade de preparar a parede uterina para a nidação do blastocisto caso haja a fecundação.
-
-A primeira alteração conhecida como fase proliferativa, ocorre simultâneamente a fase folicular do cilo ovariano (Mattson e Matfin, 2010).
-
-No início de cada ciclo o endométrio  se descama preservando as células de sua camada mais profunda. Sob a influência do estrogênio liberado pelos ovários, estas células endometriais da camada mais basal se proliferam rapidamente tanto as glândulas quanto o estroma e em poucos dias a superfície do endométrio é reepitelizada cessando a descamação e o sangramento (Curi e Procopio, 2009).
-
-
-A fase secretora acontece após a ovulação. Nos ovários o corpo lúteo passa a produzir estrogênio e principalmente progesterona. A progesterona vai atuar no endométrio estimulando a secreção das glândulas (Mattson e Matfin, 2010) e fazendo com que o endométrio fique ainda mais vascularizado . A medida em que a progesterona vai predominando em relação ao estrogênio, a capacidade proliferativa do endométrio diminui sua velocidade e a atividade mitótica é interrompida (Karp e Jason, 2015).
+O sistema hormonal feminino, figura~\ref{ciclo menstrual} página
+\pageref{ciclo menstrual}, é seguido por três hierarquias de hormônios
+a serem liberados: O hormônio liberador de gonadotrofinas (GnRH),
+secretado pelo hipotálamo, o hormônio folículo estimulante (FSH) e o
+hormônio luteinizante (LH) que são liberados pela hipófise anterior
+em resposta à liberação do GnRH e por fim os hormônios ovarianos
+estrogênio e progesterona, ambos secretados pelos ovários em resposta
+à liberação do FSH e do LH (Guyton e Hall, 2006).
 
 
-Aproximadamente uma semana após a ovulação o endométrio encontra se bastante vascularizado repleto de glicogênio, as glândulas endometriais com sua atividade secretora máxima pronto para receber o óvulo fecundado. Com a não ocorrência da fecundação, o corpo lúteo regride e o endométrio sofre a descamação dando início a um novo ciclo (Curi e Procopio, 2009).
+O endométrio sofre modificações tanto histológicas quanto morfológicas
+em resposta à liberação do estrogênio e da progesterona, liberados
+pelos ovários durante o ciclo menstrual (Geraldo Brasileiro Filho,
+2011). Essas mudanças, que tem início a cada ciclo, tem a finalidade
+de preparar a parede uterina para a nidação do blastocisto caso haja a
+fecundação. A primeira alteração, conhecida como fase proliferativa,
+ocorre simultaneamente à fase folicular do cilo ovariano (Mattson e
+Matfin, 2010).
 
+No início de cada ciclo, o endométrio se descama preservando as
+células de sua camada mais profunda. Sob a influência do estrogênio,
+liberado pelos ovários, estas células endometriais da camada mais
+basal se proliferam rapidamente tanto as glândulas quanto o estroma e
+em poucos dias a superfície do endométrio é reepitelizada, cessando a
+descamação e o sangramento (Curi e Procopio, 2009).
 
+Por outro lado, a fase secretora acontece após a ovulação. Nos ovários
+o corpo lúteo passa a produzir estrogênio e, principalmente,
+progesterona. A progesterona vai atuar no endométrio estimulando a
+secreção das glândulas (Mattson e Matfin, 2010) e fazendo com que o
+endométrio fique ainda mais vascularizado. À medida em que a
+progesterona vai predominando em relação ao estrogênio, a capacidade
+proliferativa do endométrio diminui sua velocidade e a atividade
+mitótica é interrompida (Karp e Jason, 2015).
+
+Aproximadamente uma semana após a ovulação, o endométrio encontra-se
+bastante vascularizado e repleto de glicogênio. As glândulas
+endometriais, em sua atividade secretora máxima, % o que está pronto??
+pronto para receber o óvulo fecundado. Com a não ocorrência da
+fecundação, o corpo lúteo regride, e o endométrio sofre a descamação
+dando início a um novo ciclo.  (Curi e Procopio, 2009).
 
 \section{Endometriose}
-A endometriose é uma doença ginecológica comum, de caráter benigno que se caracteriza pela presença de tecido endometrial funcional com actividade celular evidente em lesões, nódulos, quistos ou endometrioma (Audebert et al., 1992) fora da cavidade uterina ou seja: ovários, ligamentos uterinos, septo vaginal, fundo de saco, peritônio pélvico, intestino grosso e delgado (Robins e Cotran, 2010). Embora esses sejam os locais mais comuns, a endometriose pode raramente acometer órgãos e tecidos  fora da pélvis como bexiga , trato urinário e outros locais como pulmão, mamas e ossos (Filho , 2012) .
-( colocar uma imagem de uma lesao endometriótica) 
 
+A endometriose é uma doença ginecológica comum, de caráter benigno,
+que se caracteriza pela presença de tecido endometrial funcional com
+atividade celular evidente em: lesões, nódulos, quistos ou
+endometrioma (Audebert et al., 1992) e fora da cavidade uterina, como:
+ovários, ligamentos uterinos, septo vaginal, fundo de saco, peritônio
+pélvico, intestino grosso e delgado (Robins e Cotran, 2010). E, embora
+esses sejam os locais mais comuns, a endometriose pode, raramente,
+acometer órgãos e tecidos fora da pélvis, como: bexiga, trato urinário
+e até mesmo locais mais distantes como pulmão, mamas e ossos (Filho,
+2012).  ( colocar uma imagem de uma lesao endometriótica)
 
-A endometriose é uma condição crônica estrogênio dependente que geralmente acomete mulheres em idade reprodutiva (Kumar e Cols , 2012) . Apesar de ser uma doença comum e frequentemente estudada, sua causa ainda permanece desconhecida, havendo um numero cada vez maior de casos diagnosticados. Estima-se que a endometriose afeta de 10 a 15 \% das mulheres na pré menopausa e de 15 a 70\% em mulheres com infertilidade pre diagnosticada. Algumas condições clinicas, genéticas e imunes podem ser ditas como fatores de risco para o aparecimento  das lesões endometriais como: o aumento da dor e do fluxo menstrual, menarca precoce e até mesmo algum parente de primeiro grau com a mesma condição patológica (Porth e Matfin, 2010).
-As lesões endometriais ectópicas possui tecido ativo que responde de forma semelhante ao endométrio eutópico durante o ciclo menstrual por responder aos estímulos dos hormônios ovarianos estrogênio e progesterona causando hemorragias, inflamação e cicatrizes (Dongxu e Cols, 2014).
+A endometriose é uma condição crônica estrogênio-dependente que,
+geralmente, acomete mulheres em idade reprodutiva (Kumar e Cols ,
+2012). Apesar de ser uma doença comum e frequentemente estudada, sua
+causa ainda permanece desconhecida, havendo um numero cada vez maior
+de casos diagnosticados. Estima-se que a endometriose afeta de 10\% a
+15\% das mulheres na pré-menopausa e de 15\% a 70\% em mulheres com
+infertilidade pré-diagnosticada. Algumas condições clínicas, genéticas
+e imunes podem ser ditas como fatores de risco para o aparecimento das
+lesões endometriais. Alguns exemplos de condições são: o aumento da
+dor e do fluxo menstrual, menarca precoce e até mesmo algum parente de
+primeiro grau com a mesma condição patológica (Porth e Matfin, 2010).
 
-Embora as lesões endometrióticas  normalmente apareça com aspectos benígnos na histopatologia, de acordo com alguns autores, a endometriose tem sido comparado a um tumor maligno já que as lesões tem a capacidade de crescer, se infiltrar e aderir aos tecidos adjacentes (Kitawaki e Cols, 2002;. Noble e Cols, 1996 ). Porém ela raramente apresenta essas características de metástase e invasão (Robins e Cotran 2010).
+As lesões endometriais ectópicas possuem tecido ativo. E respondem de
+forma semelhante ao endométrio eutópico. Durante o ciclo menstrual,
+podem causar hemorragias, inflamação e cicatrizes por responderem aos
+estímulos dos hormônios ovarianos, o estrogênio e
+progesterona. (Dongxu e Cols, 2014).
 
-Entretanto, a endometriose sendo uma doença bastante complexa, provavelmente alguns grupos de fatores distintos quando combinados podem ter um papel importante na fisiopatologia da doença tais como polimorfismo genético, interferência hormonal através de receptores de estrogênios e progesterona , fatores do sistema imunológicos e endócrinos (troncon e Cols , 2014).
+Embora as lesões endometrióticas normalmente apareçam com aspectos
+benignos na histopatologia, de acordo com alguns autores, a
+endometriose tem sido comparado a um tumor maligno já que as lesões
+tem a capacidade de crescer, se infiltrar e aderir aos tecidos
+adjacentes (Kitawaki e Cols, 2002;. Noble e Cols, 1996). Porém, ela
+raramente apresenta as características de metástase e invasão
+(Robins e Cotran 2010).
 
-\subsection{classificação das lesões endometrióticas}
+Entretanto, a endometriose, sendo uma doença bastante complexa, pode,
+quando combinados, grupos de fatores distintos podem ter um papel
+importante na fisiopatologia da doença tais como polimorfismo
+genético, interferência hormonal através de receptores de estrogênios
+e progesterona, fatores do sistema imunológicos e endócrinos (Troncon
+e Cols, 2014).
 
+\subsection{Classificação das lesões endometrióticas}
 
-\subsubsection{Quanto a coloração}
+\subsubsection{Coloração}
 
-Cada lesão endometrial pode caracterizar-se macroscopicamente de forma diferente variando na coloração, na sua forma e na localização, podendo ser típica, quando apresenta cor escura ou atípica caracterizada pela cor amarelada ou avermelhada indicando maior atividade da doença.
+Cada lesão endometrial pode caracterizar-se, macroscopicamente, de forma
+diferente, variando: em sua coloração, forma e localização,
+podendo ser típica, quando apresenta cor escura ou atípica
+caracterizada pela cor amarelada ou avermelhada, indicando maior
+atividade da doença.
 
-Os aspectos das lesões sofrem uma variação de cor que vai da coloração inicial amarelada para a  "café com leite" até alcançar uma coloração escura. Essa variação ocorre devido ao acúmulo de hemossiderina no foco da lesão. Redwine, 1987 , relatou que essas alterações entre a mudança de claro até chegar ao escuro ou cicatricial, levam em média de 7 a 10 anos.
+Os aspectos das lesões sofrem uma variação de cor que vai da coloração
+inicial amarelada para a "café com leite", até alcançar uma coloração
+escura. Essa variação ocorre devido ao acúmulo de hemossiderina no
+foco da lesão. Redwine, 1987 relatou que essas alterações entre a
+mudança de claro até chegar ao escuro, ou cicatricial, levam em média
+de 7 a 10 anos.
 
-No ovário o tecido endometrial pode formar cistos , conhecidos como cistos de chocolate pois eles estão repletos de sangue velho que se assemelha a calda de chocolate (Figura 4). Em outras partes da pelve o tecido pode assumir a forma de pequenas lesões hemorrágicas que podem ser negras , azuladas, vermelhas, claras ou opacas (Porth e Matfin ,2010).
+No ovário, o tecido endometrial pode formar cistos, conhecidos como
+cistos de chocolate, pois, eles estão repletos de sangue velho que se
+assemelha a calda de chocolate (Figura~\ref{implantes do endometrio},
+página~\pageref{implantes do endometrio}). Em outras partes da pelve,
+o tecido pode assumir a forma de pequenas lesões hemorrágicas que
+podem ser: negras, azuladas, vermelhas, claras ou opacas (Porth e
+Matfin ,2010).
 
-As lesões vermelhas são altamente vascularizadas , causando sangramento para dentro da cavidade peritoneal, aderências e inflamação. Já as lesões mais escuras, ou as brancas, representam uma lesão cicatricial da endometriose.Do ponto de vista histológico, essas lesões são pouco vascularizadas e estão correlacionadas com uma maior quantidade de fibrose (Brosens , 1997).
+As lesões vermelhas são altamente vascularizadas, causando sangramento
+para dentro da cavidade peritoneal, aderências e inflamação. Já as
+lesões mais escuras, ou brancas, representam uma lesão cicatricial
+da endometriose. Do ponto de vista histológico, essas lesões são pouco
+vascularizadas e estão correlacionadas com uma maior quantidade de
+fibrose (Brosens, 1997).
 
 \begin{figure}[h!] 
-%\centering
-\includegraphics[width=16cm]{endometriomaroto.jpg}
-\caption[Endometriose: implantes do endométrio no ovário] {implantes do endométrio no ovário ( disponível em )}
-%\label{Rotulo}
+\centering
+\includegraphics[width=10cm]{endometriomaroto.jpg}
+\caption[Endometriose: implantes do endométrio no ovário] {implantes do endométrio no ovário (disponível em)}
+\label{implantes do endometrio}
 \end{figure} 
 
 
-\subsubsection{Quanto a diferenciação histológica}
+\subsubsection{Diferenciação histológica}
 
-Porto e Cols 2015, caracterizaram o tecido endometrial da seguinte forma (Figura 4): Estromal (tecido com presença de estroma com aspectos morfológicos similares ao endométrio tópico) ; Glandular bem diferenciada (caracterizada por conter células epiteliais com morfologia semelhante ao endométrio tópico); Glandular indiferenciada (Tecido com epitélio glandular plano ou cubos baixos sem correspondência com o endométrio ectópico) ; Mista (Tecido no qual possui a presença de glândulas de padrão diferenciado e indiferenciado). A partir desse estudo constataram que o tipo histológico glandular bem diferenciado  predominam nas lesões superficiais , já os tipos glandulares indiferenciados e mistos tem uma maior prevalência nas lesões endometrióticas profundas que acomete o peritônio e o intestino.
-
+Porto e Cols, 2015 caracterizaram o tecido endometrial da seguinte
+forma (Figura~\ref{histologico}, página~\pageref{histologico}):
+Estromal, tecido com presença de estroma com aspectos morfológicos
+similares ao endométrio tópico; Glandular bem diferenciada,
+caracterizada por conter células epiteliais com morfologia semelhante
+ao endométrio tópico; Glandular indiferenciada, tecido com epitélio
+glandular plano ou cubos baixos sem correspondência com o endométrio
+ectópico; Mista, tecido no qual possui a presença de glândulas de
+padrão diferenciado e indiferenciado. A partir desse estudo
+constataram que o tipo histológico glandular bem diferenciado
+predominam nas lesões superficiais, já os tipos glandulares
+indiferenciados e mistos tem uma maior prevalência nas lesões
+endometrióticas profundas que acomete o peritônio e o intestino.
 
 \begin{figure}[h!]
-%\centering
-\includegraphics[width=16cm]{citoendometriose16:36.jpg}
-\caption[Amostras histológicas de diversos tipos de endometriose]{Lâminas mostrando padrão histológico dos diversos tipos de endometriose. (A) endometriose estromal ; (B) endometriose glandular bem diferenciada ; (C) endometriose glandular indiferenciada; (D) endometriose glandular mista.( Disponível em Porto e Cols , 2015 )}
-%\label{Rotulo}
+\centering
+\includegraphics[width=10cm]{citoendometriose1636.jpg}
+\caption[Amostras histológicas de diversos tipos de endometriose]{Lâminas mostrando padrão histológico dos diversos tipos de endometriose. (A) endometriose estromal ; (B) endometriose glandular bem diferenciada ; (C) endometriose glandular indiferenciada; (D) endometriose glandular mista.(Disponível em Porto e Cols, 2015)}
+\label{histologico}
 \end{figure} 
 
 
-\subsubsection{Quanto a infiltração}
+\subsubsection{Infiltração}
 
+Os implantes endometriais, de acordo com seu crescimento e evolução,
+podem apresentar-se de formas distintas, podendo ser classificadas
+como: superficiais ou peritoneais, quando as lesões são muito pequenas
+com o tamanho de até 2mm, geralmente não aparecem em exames de imagem;
+intermediária, para as lesões que atingem de 2mm a 4mm; profundas, os
+implantes endometriais que atingem uma área igual ou superior a 5mm.
+Essas lesões são, geralmente, compostas por células musculares,
+epitélio glandular ativo e estroma escasso. E, podem causar uma reação
+inflamatória e até fibrose nos tecidos adjacentes (American Society
+for Reproductive Medicine, 1997).
 
+Koninckx e Martin, 1992 categorizou a endometriose da seguinte forma:
 
-Os implantes endometriais de acordo com seu crescimento e evolução , podem apresentar se de formas distintas podendo ser classificadas como superficiais ou peritoneais, quando as lesões são muito pequenas com o tamanho de até 2mm e geralmente não aparcem em exames de imagem ; intermediária as lesões que atingem de 2 a 4 mm ; profundas os implantes endometriais que atingem uma área igual ou superior a 5mm, essas lesões geralmente são compostas por células musculares, epitélio glandular ativo, estroma escasso, com reação inflamatória e pode causar fibrose nos tecidos adjacentes (American Society for Reproductive Medicine, 1997).
+\begin{itemize}
+\item Tipo I --- é caracterizada por uma lesão com maior diâmetro na
+  superfície peritoneal, que habitualmente se apresenta com aspectos
+  esbranquiçados.
+\item Tipo II --- nas lesões peritoneais, o reto encontra-se aderido ao
+  fundo de saco de Douglas e ligamentos uterossacros.
+\item Tipo III --- o implante endometrial caracteriza-se como tendo
+  seu maior diâmetro abaixo da superfície do peritôneo, de forma
+  esférica, e sua localização fica no septo reto-vaginal, onde
+  aparecem como nódulos palpáveis.
+\end{itemize}
 
-Koninckx e Martin, 1992 , descreveu a endometriose da seguinte forma:
-
-$\bullet$ Tipo I - É caracterizada por uma lesão com maior diâmetro na superfície peritoneal, que habitualmente se apresenta com aspectos esbranquiçados.
-
-$\bullet$ Tipo II - Nas lesões peritoneais , o reto encontra-se aderido ao fundo de saco de Douglas e ligamentos uterossacros.
-
-$\bullet$ Tipo III - o implante endometrial caracteriza-se como tendo seu maior diâmetro abaixo da superfície do peritôneo , de forma esférica e sua localização é no septo reto-vaginal que aparecem como nódulos palpáveis. 
-
-\subsubsection{Quanto a severidade e o comprometimento dos órgãos}
+\subsubsection{Severidade e o comprometimento dos órgãos}
 
 De acordo com Acosta e Cols, 1973, a endometriose pode ser:
 
-
-$\bullet$ Endometriose leve: lesões não associados com cicatrizes e retração do peritôneo no fundo de saco anterior ou posterior ou no peritôneo pélvico.
-
-
-$\bullet$ Endometriose moderada: Afeta um ou ambos os ovários com diversas lesões superficiais, com formação de cicatrizes ou pequenos implantes endometriais. Aderências periovarianas mínimas associadas a lesões do ovário.
-
-
-$\bullet$ Endometriose acentuada: lesões afetando um ou os dois ovários com endometriomas superior a 2 cm. Lesões afetando uma ou ambas as trompas, obstruídas por implantes endometriais com aderência ou lesão associada a endometriose.
-
-
+\begin{itemize}
+\item Endometriose leve: lesões não associados com cicatrizes e
+  retração do peritôneo, no fundo de saco anterior ou posterior ou no
+  peritôneo pélvico.
+\item Endometriose moderada: afeta um ou ambos os ovários com diversas
+  lesões superficiais, com formação de cicatrizes ou pequenos
+  implantes endometriais. Com aderências periovarianas mínimas,
+  associadas a lesões do ovário.
+\item Endometriose acentuada: lesões que afetam um ou ambos os ovários
+  com endometriomas superiores a 2cm e lesões afetando uma ou ambas as
+  trompas, obstruídas por implantes endometriais com aderência ou
+  lesão associada a endometriose.
+\end{itemize}
 
 \subsection{Teorias}
 
+A fisiopatologia da endometriose permanece desconhecida, embora muitas
+teorias foram desenvolvidas para tentar justificar a presença do
+tecido endometrial fora do seu local de origem. Como:
 
-A fisiopatologia da endometriose permanece desconhecida, embora muitas teorias foram desenvolvidas para tentar justificar a presença do tecido endometrial fora do seu local de origem.
+\begin{itemize}
+\item Teoria da menstruação retrógrada
+\item Teoria da metaplasia celômica
+\item Teoria da disfunção imunológica
+\end{itemize}
+
 
 \subsubsection{Teoria da menstruação retrógrada}
 
-
-Até hoje a teoria da menstruação retrógrada é a teoria mais aceita e foi descrita por Sampson em 1920 , onde ele afirmou que a implantação do tecido do endométrio fora da cavidade uterina se dá através da regurgitação do sangue menstrual pelas trompas de falópio e indo parar no peritônio. Estas células endometriais provocam reação inflamatória e dor nos períodos menstruais. Observou-se que a incidência de endometriose é maior em mulheres que tem refluxo tubário , porém nem todas as mulheres que possuem menstruação retrógrada sofrem de endometriose , levando a crer que a patogenicidade da doença pode ser um mecanismo multifatorial (Macer e Taylor, 2013).
+Até hoje a teoria da menstruação retrógrada é a teoria mais
+aceita. Ela foi descrita por Sampson em 1920, e afirma que a
+implantação do tecido do endométrio fora da cavidade uterina se dá
+através da regurgitação do sangue menstrual pelas trompas de Falópio e
+acabam chegando no peritônio. Onde essas células provocam reação
+inflamatória e dor nos períodos menstruais. Inclusive, observou-se que
+a incidência de endometriose é maior em mulheres que tem refluxo
+tubário, porém, nem todas as mulheres que possuem menstruação
+retrógrada sofrem de endometriose, levando a crer que a patogenicidade
+da doença pode ser um mecanismo multifatorial (Macer e Taylor, 2013).
 
 \subsubsection{Teoria da metaplasia celômica}
 
-A teoria da metaplasia celômica foi proposta por Mayer em 1919 e retificada por Nisolle e Cols, 1997. Mayer propôs essa teoria com base no fato de que o peritôneo e endométrio eutópico tem a mesma origem embrionária. Deste modo, estes tecidos mediante a estímulos hormonais teriam a capacidade de se diferenciar em células estromais e glandulares características do epitélio endometrial eutópico, sugerindo assim a origem dos focos de endometriose.
-.
+A teoria da metaplasia celômica foi proposta por Mayer em 1919 e
+retificada por Nisolle e Cols, 1997. Mayer propôs essa teoria com base
+no fato de que o peritôneo e endométrio eutópico tem a mesma origem
+embrionária. Deste modo, estes tecidos, mediante a estímulos
+hormonais, teriam a capacidade de se diferenciar em células estromais
+e glandulares características do epitélio endometrial eutópico,
+sugerindo assim a origem dos focos de endometriose.
 
 \subsubsection{Teoria da disfunção imunológica}
 
-Esta teoria ajuda explicar o por que mulheres com menstruação retrógrada desenvolvem endometriose e outras não. Pois pesquisas realizadas verificaram que mulheres com endometriose tem imunidade alterada suportando a possibilidade de que a patogênese da endometriose pode estar envolvida com uma resposta imune deficiente (Sinaii e Cols, 2002).
+Esta teoria ajuda a explicar por que algumas mulheres com menstruação
+retrógrada desenvolvem endometriose enquanto outras não. Pesquisas
+mostraram que mulheres com endometriose tem imunidade alterada,
+suportando a teoria de que a patogênese da endometriose pode estar
+envolvida com uma resposta imune deficiente (Sinaii e Cols, 2002).
 
-Pacientes com endometriose tem uma concentração mais elevada de macrófagos ativados,diminuição da imunidade celular e repressão das células NK (Sikora e cols, 2011 ; Osuga e Cols, 2011).      
+Pacientes com endometriose tem uma concentração mais elevada de
+macrófagos ativados, diminuição da imunidade celular e repressão das
+células NK (Sikora e cols, 2011; Osuga e Cols, 2011).
 
-As lesões endometrióticas desencadeia uma resposta inflamatória recrutando macrófagos e leucócitos ativados no local(Kyama e Cols, 2009). Esta resposta inflamatória pode impedir a eliminação dos resquícios menstrual provenientes da menstruação retrógrada e consequentemente promover a implantação e o crescimento das células do endométrio nos locais ectópicos(Christodoulakos e Cols, 2007). 
+As lesões endometrióticas desencadeiam uma resposta inflamatória,
+recrutando macrófagos e leucócitos ativados no local (Kyama e Cols,
+2009). Esta resposta inflamatória pode impedir a eliminação dos
+resquícios menstruais provenientes da menstruação retrógrada e
+consequentemente promover a implantação e o crescimento das células do
+endométrio nos locais ectópicos (Christodoulakos e Cols, 2007).
 
-De acordo com (Ulukus e Arici, 2005) tanto as células do sistema imune  quanto as células endometriais secretam citocinas e fatores de crescimento os quais induzem a proliferação celular e a angiogênese promovendo assim a implantação e o crescimento das lesões endometriais.
-
-
-
+De acordo com (Ulukus e Arici, 2005) tanto as células do sistema imune
+quanto as células endometriais secretam citocinas e fatores de
+crescimento os quais induzem a proliferação celular e a angiogênese,
+promovendo assim a implantação e o crescimento das lesões
+endometriais.
 
 \subsection{Sintomas} 
 
+Os aspectos clínicos da doença consistem em dismenorreia grave,
+dispareunia e dor pélvica em decorrência de sangramentos e aderências
+intrapélvicas. Dores durante a defecação indicam envolvimento da
+parede retal e disúria no envolvimento da bexiga. E, quando a doença
+afeta o intestino delgado pode também ocasionar perturbações
+intestinais (Robins e Cotran , 2010).
 
-Os aspectos clínicos da doença consistem em dismenorreia grave, dispareunia e dor pélvica em decorrência de sangramentos e aderências intrapélvicas.Dores durante a defecação indica envolvimento da parede retal e a disúria no envolvimento da bexiga. Quando a doença afeta o intestino delgado podem ocasionar em perturbações intestinais ( Robins e Cotran , 2010).
+A sintomatologia da endometriose é bastante variada e autores afirmam
+que não há relação entre os aspectos das lesões e os sintomas da
+doença (Martin e Cols , 1989).  De acordo com um estudo realizado por
+Hedyeh Riazi e Cols, 2015, os sintomas associados a esta patologia são
+diversos e variam de acordo com o diagnóstico clinico de cada
+paciente. Os sintomas mais comuns relatados da endometriose são: Dores
+que se agravaram ao longo do tempo, descritas como dores pélvicas
+durante o ciclo menstrual, dores ao ter relações sexuais, dor lombar,
+dor retal ao evacuar no período menstrual, infecções no trato
+urinário, inchaço, enxaqueca, cansaço, febre, sangramentos,
+infertilidade, distúrbios digestivos, náuseas, dores no estômago,
+candidíase, doença inflamatória pélvica, cistos ovarianos, tonturas,
+fadiga crônica.
 
-A sintomatologia da endometriose  é bastante variada e autores afirmam que não há relação entre os aspectos das lesões e os sintomas da doença ( martin e cols , 1989 ).
-De acordo com um estudo realizado por Hedyeh Riazi e cols,2015, os sintomas associados a esta patologia são diversos e varia de acordo com o diagnóstico clinico de cada paciente .Os sintomas mais comuns relatados da endometriose são: Dores que se agravaram ao longo do tempo descritas como dores pélvicas durante o ciclo menstrual, dores ao ter relações sexuais, dor lombar, dor retal ao evacuar no período menstrual,infecções no trato urinário,inchaço , enxaqueca,cansaço , febre, sangramentos e infertilidade.Distúrbios digestivos, náuzeas , dores no estômago, candidíase, doença inflamatória pélvica,cistos ovarianos,  tonturas, fadiga crônica, também são sintomas que foram foram atribuídas a endometriose.
+Quando os implantes endometriais estão presentes na bexiga, os
+sintomas característicos são hematúria e disúria. A hematúria cíclica
+é uma característica importante da endometriose na bexiga, porém só
+está presente em 20\% das pacientes (Akpınar e Cols, 2015).
 
-Quando os implantes endometriais estão presentes na bexiga, os sintomas característicos são hematúria e disúria. A hematúria cíclica é uma característica importante da endometriose na bexiga porém só está presente em 20\% das pacientes (Akpınar e Cols, 2015).
+Segundo Gao X e Cols, 2006, pacientes com endometriose podem
+desenvolver transtornos psicológicos como ansiedade e depressão.
+Deste modo, estes sintomas associados geram impacto negativo no bem
+estar físico, mental e social da mulher, impedindo-a de realizar
+atividades de sua vida cotidiana, diminuindo sua qualidade de vida e
+desempenho sexual (Fourquet e Cols, 2011).
 
-Segundo Gao X e cols,2006  pacientes com endometriose podem desenvolver transtornos psicológicos como ansiedade e depressão.
+A endometriose também pode ser assintomática, como a endometriose
+intestinal que aparece como implantes serosos e ocorre em 3\% a 37\% % 3% a 37% ? 30% a 37% ou 3% a 3,7%?
+dos pacientes com endometriose (Pisanu e Cols, 2010).
 
+Os pacientes com endometriose tendem a desenvolver sintomas
+adicionais, tais como alergias, fibromialgia, asma, eczema, doença
+inflamatória autoimune, síndrome da fadiga crônica e hipotireoidismo
+(Sinaii e Cols, 2002).
 
-Deste modo, estes sintomas associados geram impacto negativo no bem estar físico, mental e social da mulher impedindo-a de realizar atividades de sua vida cotidiana, diminuindo sua qualidade de vida e desempenho sexual ( Fourquet e Cols, 2011).
-
-
-A endometriose também pode ser assintomática, como a endometriose intestinal que aparece como implantes serosos e ocorre em 3\% a 37\% dos pacientes com endometriose (Pisanu e Cols, 2010).
-
-
-Os pacientes com endometriose tendem a desenvolver sintomas adicionais, tais como alergias, fibromialgia, asma, eczema, doença inflamatória autoimune, síndrome da fadiga crônica e hipotireoidismo (Sinaii e Cols, 2002).
-
-Há também um maior risco de câncer de mama em mulheres diagnosticadas com endometriose após os 40 anos, devido à sua maior exposição ao estrogênio endógeno elevado (Bertelsen e Cols, 2007). 
-
+Há também um maior risco de câncer de mama em mulheres diagnosticadas
+com endometriose após os 40 anos, devido à sua maior exposição ao
+estrogênio endógeno elevado (Bertelsen e Cols, 2007).
 
 \subsection{Diagnóstico}
 
-A endometriose é uma doença debilitante que pode causar vários problemas na vida da mulher, entretanto quando diagnosticada precocemente ela pode ser tratada e seus sintomas diminuídos.
-Embora o diagnóstico definitivo da endometriose necessite de uma intervenção cirúrgica, preferencialmente por videolaparoscopia, diversos achados nos exames físico, de imagem e laboratoriais já podem predizer, com alto grau de confiabilidade, que a paciente apresenta endometriose.
-
-
+A endometriose é uma doença debilitante que pode causar vários
+problemas na vida da mulher, entretanto, quando diagnosticada
+precocemente, ela pode ser tratada e seus sintomas diminuídos.  Embora
+o diagnóstico definitivo da endometriose necessite de uma intervenção
+cirúrgica, preferencialmente por videolaparoscopia, diversos achados
+nos exames físico, de imagem e laboratoriais já podem predizer, com
+alto grau de confiabilidade, que a paciente apresenta endometriose.
 
 \subsubsection{Diagnóstico Clínico}
 
-A investigação inicial da endometriose é feita por meio de uma anamnese para avaliação dos sintomas clínicos. Vale lembrar que o grau de severidade da doença não está relacionado com os sintomas . Entretanto, o diagnóstico da endometriose se torna difícil de se confirmar devido a variabilidade de sintomas , bem como a correlação não confiável entre a apresentação clínica e os achados cirúrgicos (Wellbery, 1999) pois esses sintomas podem estar relacionados com outras condições patológicas como a síndrome do intestino irritável e doença inflamatória pélvica. Por isso muitas vezes há um atraso de vários anos entre o início dos sintomas e o diagnóstico definitivo (Hadfield e Cols, 1995 ; Arruda e Cols 2003). Segundo Kundu e Cols, 2015 esse atraso no diagnóstico se dá também pela má relação entre médico e paciente, pois de acordo com relatos dos paciente portadoras da doença, muitos médicos não levam a sério as condições clínicas do paciente dificultando seu diagnóstico.
+A investigação inicial da endometriose é feita por meio de uma
+anamnese para avaliação dos sintomas clínicos. Vale lembrar que o grau
+de severidade da doença não está relacionado com os sintomas.
+Entretanto, o diagnóstico da endometriose se torna difícil de se
+confirmar devido a variabilidade de sintomas, bem como a correlação
+não confiável entre a apresentação clínica e os achados cirúrgicos
+(Wellbery, 1999), pois, esses sintomas podem estar relacionados com
+outras condições patológicas como a síndrome do intestino irritável e
+doença inflamatória pélvica. Por isso, muitas vezes, há um atraso de
+vários anos entre o início dos sintomas e o diagnóstico definitivo
+(Hadfield e Cols, 1995; Arruda e Cols 2003). Segundo Kundu e Cols,
+2015 esse atraso no diagnóstico se dá também pela má relação entre
+médico e paciente, pois de acordo com relatos das pacientes portadoras
+da doença, muitos médicos não levam a sério as condições clínicas
+delas, dificultando seu diagnóstico.
 
+Há uma grande variedade de sintomas dolorosos que podem estar
+relacionados à aparência, ao grau de invasão, à localização e à
+profundidade de acometimento das lesões. São seis os sintomas que
+devem ser investigados: dismenorréia, dispareunia, dor pélvica
+acíclica, infertilidade e alterações urinárias e intestinais cíclicas.
 
-Há uma grande variedade de sintomas dolorosos que podem estar relacionados à aparência, ao grau de invasão, à localização e à profundidade de acometimento das lesões. São seis os sintomas que devem ser investigados: dismenorréia, dispareunia, dor pélvica acíclica, infertilidade e alterações urinárias e intestinais cíclicas.
+Os sinais e sintomas associados ao exame clínico ginecológico já podem
+dar uma ideia da presença da doença e do comprometimento dos órgãos
+pélvicos, como é o caso da endometriose profunda infiltrativa, cujos
+sinais sugestivos são nodulações palpáveis no fórnice vaginal
+posterior ou septo retrovaginal, espessamento dos ligamentos
+uterossacros ou lesões na vagina (Kennedy e Cols, 2005).
 
-Os sinais e sintomas associados ao exame clínico ginecológico já podem dar uma ideia da presença da doença e do comprometimento dos órgãos pélvicos afetados, como é o caso da endometriose profunda infiltrativa, cujos sinais sugestivos são nodulações palpáveis no fórnice vaginal posterior ou septo retrovaginal, espessamento dos ligamentos uterossacros ou lesões na vagina (Kennedy e Cols, 2005).  
+Esterilidade, irregularidade menstrual e dispaurenia (profunda) são
+outras queixas. Em princípio, qualquer sinal ou sintoma que surja ou
+se agrave no período menstrual tais como hematúria (menúria), disúria,
+urgência miccional, polaciúria, dor ou sangramento à evacuação,
+diarréia, deve nos sugerir diagnóstico de endometriose. O exame físico
+pode ser aparentemente normal ou revelar nódulos na vagina, colo,
+septo reto-vaginal e outros, espessamento (paramétrio), útero com
+mobilidade reduzida, e doloroso à mobilização, massas anexiais.
 
-Esterilidade, irregularidade menstrual e dispaurenia (profunda) são outras queixas. Em princípio, qualquer sinal ou sintoma que surja ou se agrave no período menstrual tais como hematúria (menúria), disúria, urgência miccional, polaciúria, dor ou sangramento à evacuação, diarréia, deve nos sugerir diagnóstico de endometriose. O exame físico pode ser aparentemente normal ou revelar nódulos (vagina, colo, septo reto-vaginal...), espessamento (paramétrio), útero com mobilidade reduzida, e doloroso à mobilização; massas anexiais.
-
-Se o paciente estiver com sintomas de dor sugestivo de endometriose deverá ser tratado sem um diagnóstico definitivo, e exames adicionais deverá ser solicitado.
-
+Se o paciente estiver com sintomas de dor sugestivos de endometriose,
+este deve ser tratado sem um diagnóstico definitivo, e exames
+adicionais devem ser solicitados.
  
 \subsubsection{Diagnóstico laboratorial}
 
-Podemos utilizar também exame de sangue para pesquisa da presença do CA 125. O CA 125 é um marcador da endometriose, ou seja, ele esta presente na corrente sanguínea em níveis superiores aos normais, quando a paciente está com doença em atividade, e se ele estiver com nível superior a 100 U/ml, é indicativo de endometriose avançada muitas vezes já com comprometimento intestinal. 
+Podemos utilizar também exame de sangue para pesquisa da presença do
+CA-125. O CA-125 é um marcador da endometriose, ou seja, ele esta
+presente na corrente sanguínea em níveis superiores aos normais,
+quando a paciente está com doença em atividade, e se ele estiver com
+nível superior a 100 U/ml, é indicativo de endometriose avançada,
+muitas vezes já com comprometimento intestinal.
 
-O CA-125, anticorpo monoclonal contra antígenos do epitélio ovariano. Não é específico podendo surgir também em outros tumores de linhagem epitelial em enfermidades hepáticas, etc. Na endometriose avançada pode se elevar a níveis superiores a 100U/ml. Deve ser dosado no soro no período menstrual.
+O CA-125, anticorpo monoclonal contra antígenos do epitélio ovariano,
+não é específico, podendo surgir também em outros tumores de linhagem
+epitelial, em, por exemplo, enfermidades hepáticas. Na endometriose
+avançada pode se elevar a níveis superiores a 100U/ml. Ele deve ser
+dosado no soro no período menstrual.
 
-\subsubsection{Laparoscipia}
+\subsubsection{Laparoscopia}
 
+% padrão ouro?!
+Considerado padrão ouro, a laparoscopia é uma técnica cirúrgica eficaz
+com o objetivo de excisão endometriose visível e confirmação através
+de exame histológico. Embora a comparação citológica seja padrão para
+o diagnóstico da endometriose, algumas lesões visualizadas durante a
+cirurgia não são examinadas em biópsia por que a visualização direta é
+suficientemente característica (Adamson e Nelson, 1997). Como a
+endometriose é uma condição crônica, é comum haver reincidência.
 
-Considerado padrão ouro, a laparoscopia é uma técnica cirúrgica eficaz com o objetivo de excisão endometriose visível e confirmação através de exame histológico. Embora a comparação citológica seja padrão para o diagnóstico da endometriose, algumas lesões visualizadas durante a cirurgia não são examinadas em biópsia por que a visualização direta é suficientemente característica (Adamson e Nelson, 1997).Como a endometriose é uma condição crônica, é comum haver reincidência.
+A laparoscopia é um procedimento cirúrgico onde o paciente é
+anestesiado por uma anestesia geral --- uma pequena incisão é feita
+perto do umbigo e um laparoscópio, tubo iluminado flexível, é inserido
+nessa incisão. Com o laparoscópio é possível examinar e procurar
+possíveis implantes endometriais nos órgãos abdominais do paciente com
+possíveis implantes endometriais no abdome do paciente.
 
-
-
-A laparoscopia é um procedimento cirúrgico onde o paciente é anestesiado com uma anestesia geral, uma pequena incisão é feita perto do umbigo, e um laparoscópio (tubo iluminado flexível) é inserido nessa incisão. Com o laparoscópio é possível examinar e procurar possíveis implantes endometriais no abdome órgãos abdominais do paciente com possíveis implantes endometriais no abdome  do paciente.  
-
-
-É importante notar que nem todas as lesões de endometriose são visualizados no momento da cirurgia; lesões podem estar escondidos por órgãos ou aderências pélvicas, microscópico ou semelhantes na aparência com outras lesões malignas ou benignas, como o câncer de ovário, hemangioma ou gravidez ectópica (Brosens e Cols, 2004). 
-
+É importante notar que nem todas as lesões de endometriose são
+visualizadas no momento da cirurgia; lesões podem estar escondidos por
+órgãos ou aderências pélvicas, microscópico ou semelhantes na
+aparência com outras lesões malignas ou benignas, como o câncer de
+ovário, hemangioma ou gravidez ectópica (Brosens e Cols, 2004).
 
 \subsubsection{Diagnóstico por métodos de imagem}
 
 \paragraph{Ultrassonografia } 
 
-Por ser de custo acessível, ausência de radiação ionizante e fácil acesso, a ultrassonografia transvaginal é o primeiro exame de imagem a ser solicitado para a paciente com história e exame físico sugestivo de endometriose (Fleischer e cols, 1996), preferencialmente com preparo intestinal, que tem por objetivo eliminar os resíduos fecais e gases eventualmente presentes no intestino, atrapalhando a identificação das lesões de endometriose encontradas no reto, sigmoide regiões retrocervical e septo retovaginal. Um estudo de Abrão e Cols,2007 , avaliando o exame, demonstrou uma sensibilidade de 94\% e uma especificidade de 98\% na identificação de focos de endometriose profunda.
+% Não está mto bom no final do parágrafo
+Por ser de custo acessível, ausência de radiação ionizante e fácil
+acesso, a ultrassonografia transvaginal é o primeiro exame de imagem a
+ser solicitado para a paciente com histórico e exame físico sugestivo
+de endometriose (Fleischer e Cols, 1996). Preferencialmente com
+preparo intestinal, que tem por objetivo eliminar os resíduos fecais e
+gases eventualmente presentes no intestino, que possam atrapalhar a
+identificação das lesões de endometriose encontradas no reto, sigmoide
+regiões retrocervical e septo retovaginal. Um estudo de Abrão e
+Cols, 2007, avaliando o exame, demonstrou uma sensibilidade de 94\% e
+uma especificidade de 98\% na identificação de focos de endometriose
+profunda.
 
-Bazot e Cols, 2003, demonstrou que a ultrassonografia transvaginal foi tão eficiente quanto a transretal endoscópica, tanto para o diagnóstico quanto para a avaliação da extensão da endometriose retal.
+Bazot e Cols, 2003, demonstrou que a ultrassonografia transvaginal foi
+tão eficiente quanto a transretal endoscópica, tanto para o
+diagnóstico quanto para a avaliação da extensão da endometriose retal.
 
-Para avaliação de endometriose intermediária ou profunda, a ultrassonografia transvaginal é um método eficiente (Moore e Cols, 2012). Como relatado por Fedele e Cols, 1997, essa técnica é recomendada para o diagnóstico de endometriomas e endometriose da bexiga, porém quanto a avaliação de lesões superficiais peritoneais ou focos de endometriose no ovário, o uso da ultrassonografia como diagnóstico ainda é inconclusivo.
+% Esse também não está legal
+Para avaliação de endometriose intermediária ou profunda, a
+ultrassonografia transvaginal é um método eficiente (Moore e Cols,
+2012). Como relatado por Fedele e Cols, 1997, essa técnica é
+recomendada para o diagnóstico de endometriomas e endometriose da
+bexiga, porém, quanto a avaliação de lesões superficiais peritoneais
+ou focos de endometriose no ovário, o uso da ultrassonografia como
+diagnóstico ainda é inconclusivo.
 
-Segundo Bazot e Cols, 2003, a principal limitação das técnicas de ultrassonografia é pela falta de amplitude da área estudada, pois elas se concentram em uma área anatômica limitada da cavidade pélvica.
-
-
+Segundo Bazot e Cols, 2003, a principal limitação das técnicas de
+ultrassonografia é a falta de amplitude da área estudada, pois elas
+se concentram em uma área anatômica limitada da cavidade pélvica.
 
 \paragraph{Ressonância Nuclear Magnética (RNM)}
 
-A ressonância nuclear magnética (RNM) é recomendada para complementar o diagnóstico da endometriose pélvica. As principais indicações estão relacionadas ao estadiamento da doença, ou seja, na maneira de avaliar a extensão da endometriose em relação ao órgão no qual se originou, e na análise de imagens duvidosas no estudo com o ultra-som.
+A ressonância nuclear magnética (RNM) é recomendada para complementar
+o diagnóstico da endometriose pélvica. As principais indicações estão
+relacionadas ao estadiamento da doença, ou seja, na maneira de avaliar
+a extensão da endometriose em relação ao órgão no qual se originou, e
+na análise de imagens duvidosas no estudo com o ultra-som.
 
-A RM recentemente foi usada para o diagnóstico em que os ligamentos sacro uterinos revelou falta de sensibilidade para o diagnóstico da doença com envolvimento retal (Kinkel e cols, 1999).
+A RNM foi recentemente usada para o diagnóstico em que os ligamentos
+sacro uterinos revelaram falta de sensibilidade para o diagnóstico da
+doença com envolvimento retal (Kinkel e Cols, 1999). % Envolvimento?
 
-No estudo realizado por Bazot e Cols, 2003, com pacientes que foram submetidos a RNM, eles obtiveram uma sensibilidade de 90,3\% e especificidade de 91\% . Também fizeram uma comparação  de RNM e achados cirúrgicos patológicos de pacientes com endometriose pélvica comprovada onde foram observadas áreas de tecidos correspondente a fibrose, característico de endometriose. Quando a RNM foi comparada com a ultrassonografia transvaginal, a RNM mostrou se mais específica pois era capáz de fazer uma avaliação mais ampla da pélvis. Porém quando a endomeriose pélvica profunda está localizada no cólon sigmóide, pode ser confundido com material fecal, sendo assim, o uso de enema antes da RNM é útil para o diagnóstico neste local (Kinkel e cols, 1999).
-
-
-
+No estudo realizado por Bazot e Cols, 2003, com pacientes que foram
+submetidos a RNM, eles obtiveram uma sensibilidade de 90,3\% e
+especificidade de 91\%. Também fizeram uma comparação de RNM e
+achados cirúrgicos patológicos de pacientes com endometriose pélvica
+comprovada onde foram observadas áreas de tecidos correspondente a
+fibrose, característico de endometriose. Quando a RNM foi comparada
+com a ultrassonografia transvaginal, a RNM mostrou-se mais específica,
+pois era capáz de fazer uma avaliação mais ampla da pélvis. Porém,
+quando a endomeriose pélvica profunda está localizada no cólon
+sigmóide, pode ser confundido com material fecal, sendo assim, o uso
+de enema antes da RNM é útil para o diagnóstico neste local (Kinkel e
+Cols, 1999).
 
 
 \paragraph{Eco-colonoscopia}
 
-Indicado especialmente em casos de suspeita de endometriose envolvendo o intestino. Baseia-se na realização de um ultra-som por via transretal, associado a um exame de colonoscopia. Desta forma, tem-se uma imagem que pode indicar a presença da endometriose e permite, ainda, avaliar as camadas de intestino acometidas pela doença. No entanto é um exame mais invasivo quando comparado a outros exames como o ultra-som com preparo intestinal e a ressonância, além de estar limitado à avaliação apenas do intestino
-
+Indicado especialmente em casos de suspeita de endometriose envolvendo
+o intestino. Baseia-se na realização de um ultra-som por via
+transretal, associado a um exame de colonoscopia. Desta forma, tem-se
+uma imagem que pode indicar a presença da endometriose e, permite
+ainda avaliar as camadas de intestino acometidas pela doença. No
+entanto, é um exame mais invasivo quando comparado a outros exames como
+o ultra-som com preparo intestinal e a ressonância, além de estar
+limitado à avaliação apenas do intestino
 
 \subsection{Perspectivas para um novo diagnóstico da endometriose}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
 \subsection{Tratamento} 
-Tratamentos para a endometriose é individualizado e vai depender da intensidade dos sintomas e da evolução das lesões. sendo assim o tratamento pode envolver tanto a intervenção farmacológica ou cirúrgica , lembrando que dependendo do paciente e do estágio das lesões esses procedimentos são feitos de forma integrada(Hernando e Cols,2015). Os tratamentos médicos farmacológicos disponíveis para a endometriose incluem contraceptivos orais, análogos de GnRH, análogos de progesterona e inibidores da aromatase, cada um desses medicamentos tem suas especificidades e cabe ao médico avaliar a gravidade da doença para prescrever a melhor forma de tratamento para cada caso individualizado (Braundmeier e Fazleaba, 2009).
 
-A forma de tratamento para a endometriose pode ser dividida em três categorias: alívio da dor, supressão endometrial e cirurgia( Mattson e Matfin ,2010 ). A escolha do tratamento dependerá da gravidade dos sintomas, da extensão e localização da doença, do desejo de engravidar e da idade da paciente.
+O tratamentos para a endometriose é individualizado e depende da
+intensidade dos sintomas, assim como da evolução das lesões. Sendo
+assim, o tratamento pode envolver tanto a intervenção farmacológica
+como a cirúrgica, lembrando que dependendo do paciente e do estágio
+das lesões esses procedimentos são feitos de forma integrada(Hernando
+e Cols, 2015). Os tratamentos médicos farmacológicos disponíveis para
+a endometriose incluem: contraceptivos orais, análogos de GnRH,
+análogos de progesterona e inibidores da aromatase. Cada um desses
+medicamentos tem suas especificidades e cabe ao médico avaliar a
+gravidade da doença para prescrever a melhor forma de tratamento para
+cada caso individualizado (Braundmeier e Fazleaba, 2009).
 
-Ainda há uma necessidade de novos medicamentos para tratamento da endometriose que reduza a dor pélvica , minimize a intervenção cirúrgica e preserve a fertilidade (Hernando e Cols,2015).
+A forma de tratamento para a endometriose pode ser dividida em três
+categorias: alívio da dor, supressão endometrial e cirurgia (Mattson e
+Matfin ,2010). A escolha do tratamento dependerá da gravidade dos
+sintomas, da extensão, localização da doença, do desejo de engravidar
+e da idade da paciente.
 
+Ainda há uma necessidade de novos medicamentos para tratamento da
+endometriose que reduza a dor pélvica, minimize a intervenção
+cirúrgica e preserve a fertilidade (Hernando e Cols,2015).
 
-A endometriose pode retornar independente do tratamento( exceto a cirurgia radical) e esse retorno pode estar associada com a gravidade da doença. Com o tratamento clínico as taxas de recidivas da doença depois de 7 anos variam de 34 \% em mulheres com doença leve até 74\% em mulheres com a doença grave. Foram relatadas taxa de recidivas de 20 a 40\% dentro de 5 anos após cirurgia (Mattson e Matfin ,2010) .
-
+% recidivas está certo?
+A endometriose pode retornar independente do tratamento, exceto da
+cirurgia radical, e, esse retorno pode estar associada com a gravidade
+da doença. Com tratamento clínico, as taxas de recidivas da doença
+depois de 7 anos variam de 34\% em mulheres com doença leve e até 74\%
+em mulheres com doença grave. Foram, também, relatadas taxa de
+recidivas de 20 a 40\% dentro de 5 anos após cirurgia (Mattson e
+Matfin ,2010) .
 
 \subsubsection{Análogos de GnRH}
 
-Sabe-se que o GnRH (hormônio liberador de gonadotrofinas) é um hormônio liberados de forma pulsátil em média de 5 a 25 minutos de duração secretado pelo hipotálamo que age sobre a hipófise levando como resposta a liberação de LH e FSH (hormônio luteinizante e hormônio folículo estimulante respectivamente). Ele é responsável por regular indiretamente a atividade gonadal por meio da liberação do LH e do FSH ( Guyton e Hall,2006 ). Deste modo, os antagonistas de GnRH tem como principal mecanismo de ação inibir os receptores competitivos de GnRH , já os agonistas de GnRH provocam uma liberação inicial de gonadotrofinas seguida de uma dessensibilização gonadotrópica e desregulação da sinalização intracelular. sendo assim, Huirne  e Lambalk , 2001, mostrou que a utilização de antagonistas de GnRH deve possivelmente ser tão eficaz quanto a utilização de um agonista de GnRH no tratamento da endometriose.
-Alguns fármacos mais utilizados como análogos de GnRH no tratamento da endometriose são a Leuprolida e a Goserelina ( Roladex ) eles são eficazes no melhoramento da dor das pacientes com endometriose , no entanto, essas medicações tem provocado efeitos adversos , como suores noturnos e a diminuição significativa de massa óssea (Schrager e Cols, 2013). 
+Sabe-se que o GnRH, hormônio liberador de gonadotrofinas, é um
+hormônio liberado de forma pulsátil, em média de 5 a 25 minutos de
+duração. É secretado pelo hipotálamo e age sobre a hipófise, levando
+como resposta a liberação de LH e FSH, o hormônio luteinizante e
+hormônio folículo estimulante, respectivamente.
+
+Ele é responsável por regular indiretamente a atividade gonadal por
+meio da liberação do LH e do FSH (Guyton e Hall, 2006). Deste modo, os
+antagonistas de GnRH tem como principal mecanismo de ação inibir os
+receptores competitivos de GnRH, já os agonistas de GnRH provocam uma
+liberação inicial de gonadotrofinas, seguida de uma dessensibilização
+gonadotrópica e desregulação da sinalização intracelular. Sendo assim,
+Huirne e Lambalk, 2001, mostraram que a utilização de antagonistas de
+GnRH devem possivelmente ser tão eficaz quanto a utilização de um
+agonista de GnRH no tratamento da endometriose.  Alguns fármacos mais
+utilizados como análogos de GnRH no tratamento da endometriose são a
+Leuprolida e a Goserelina, conhecido como Roladex, eles são eficazes % é conhecido como roladex ou é outra coisa?
+no melhoramento da dor das pacientes com endometriose, entretanto,
+essas medicações tem provocado efeitos adversos, como suores noturnos
+e a diminuição significativa de massa óssea (Schrager e Cols, 2013).
 
 \subsubsection{Danazol}
 
-É um fármaco utilizado no tratamento da endometriose pois se mostrou eficaz no combate a dores pélvicas associadas endometriose. Ele pode ser administrado tanto por via oral ou por via vaginal através de anéis vaginais, cremes ou dispositivos intrauterinos, porém sua utilização ainda é limitado por causar efeitos colaterais androgenicos significativos como ganho de peso, acne, seborreia e pelos excessivos pelo corpo(hirutismo) .
+Danazol é um fármaco utilizado no tratamento da endometriose por ter
+se mostrado eficaz no combate a dores pélvicas associadas à
+endometriose. Ele pode ser administrado tanto por via oral ou por via
+vaginal, através de anéis vaginais, cremes ou dispositivos
+intrauterinos, porém, sua utilização ainda é limitado por causar
+efeitos colaterais androgênicos significativos como ganho de peso,
+acne, seborreia e pelos excessivos pelo corpo --- hirutismo.
 
-Estudos realizados por Cottreau e cols 2003, mostrou uma associação entre o uso do danazol e o aparecimento de câncer no ovário. Os autores sugerem que os andrógenos circulantes com o uso do danazol podem estar envolvidos no desenvolvimento do câncer ovariano pois foi observado uma grande expressão de receptores androgênicos na maioria dos tumores no ovários.
+Estudos realizados por Cottreau e Cols 2003, mostraram uma associação
+entre o uso do danazol e o aparecimento de câncer no ovário. Os
+autores sugerem que os andrógenos circulantes com o uso do danazol
+podem estar envolvidos no desenvolvimento do câncer ovariano, pois foi
+observado uma grande expressão de receptores androgênicos na maioria
+dos tumores nos ovários.
 
 \subsubsection{Inibidores da aromatase ( IAs )}
 
-Como a endometriose é considerada uma doença crônica dependente de estrogênio, inibidores da aromatase são utilizados no tratamento da doença como o Anastrozol e o Letrozol. Aromatazes são enzimas que converte andrógenos adrenais em estrogênio( Almassinokiani e cols, 2014 ), e esses inibidores utilizados tem como mecanismo de ação inibir esta enzima bloqueando a conversão e suprimir os níveis de estrogênio em tecidos de endometriose. Os IAs são utilizados para tratar as dores pélvicas provenientes da endometriose reduzindo os tamanhos das lesões . Ele também mostrou se eficaz quando administrado em conjunto com os análogos de GnRH em mulheres que mostraram resistência aos tratamentos convencionais (Usluogullari e cols ,2015).
-
-
+Como a endometriose é considerada uma doença crônica dependente de
+estrogênio, inibidores da aromatase são utilizados no tratamento da
+doença como o Anastrozol e o Letrozol. Aromatazes são enzimas que
+convertem andrógenos adrenais em estrogênio (Almassinokiani e Cols,
+2014), e esses inibidores utilizados tem como mecanismo de ação inibir
+esta enzima bloqueando a conversão e suprimir os níveis de estrogênio
+em tecidos de endometriose. Os IAs são utilizados para tratar as dores
+pélvicas provenientes da endometriose, reduzindo os tamanhos das
+lesões. Ele também mostrou ser eficaz quando administrado em conjunto
+com os análogos de GnRH em mulheres que mostraram resistência aos
+tratamentos convencionais (Usluogullari e cols ,2015).
 
 
 \subsubsection{Tratamento cirúrgico}
 
+Quando o tratamento medicamentoso e hormonal não surtem os efeitos
+desejados, a cirurgia pode ser necessária para aliviar a dor e
+aumentar possibilidade de gestação.  O tratamento cirúrgico da
+endometriose compreende desde procedimentos de baixa complexidade,
+como a cauterização de focos superficiais e liberação de aderências, até
+intervenções complexas nos ovários, fundo de saco de Douglas,
+intestino, bexiga e ureteres (Guo, 2009). Além disso, muitas pacientes
+apresentam infertilidade associada à dor, exigindo que o procedimento
+cirúrgico seja conservador. Entretanto, é importante que tanto o
+médico quanto a paciente estejam cientes de que a cirurgia
+conservadora implica índices elevados de recorrência da doença. % recorrência da dor ou da doença? estava dor, troquei
 
-Quando o tratamento medicamentoso e hormonal não surtem os efeitos desejados, a cirurgia pode ser necessária para aliviar a dor e aumentar possibilidade de gestação. 
-O tratamento cirúrgico da endometriose compreende desde procedimentos de baixa complexidade, como cauterização de focos superficiais e liberação de aderências, até intervenções complexas nos ovários, fundo de saco de Douglas, intestino, bexiga e ureteres (Guo, 2009). Além disso, muitas pacientes apresentam infertilidade associada à dor, exigindo que o procedimento cirúrgico seja conservador. Entretanto, é importante que tanto o médico quanto a paciente estejam cientes de que a cirurgia conservadora implica índices elevados de recorrência da dor.
+Para a paciente com infertilidade associada a endometriose de grau
+mínimo e leve, a ablação dos focos e a adesiólise mostrou-se eficaz,
+melhorando a fertilidade (Jacobson e Cols, 2002).
 
-Para a paciente com infertilidade associada a endometriose de grau mínimo e leve, a ablação dos focos e a adesiólise mostrou se eficaz melhorando a fertilidade (Jacobson e Cols, 2002).
+% Não está mto bom
+Para os pacientes com endometriomas ovarianos e que não respondem
+adequadamente ao tratamento medicamentoso, a cirurgia é indicada nos
+casos de endometriomas sintomáticos ou grandes (Chapron e Cols, 2002).
 
-Para os pacientes com endometriomas ovarianos e que não respondem adequadamente ao tratamento medicamentoso, a cirurgia indicada nos casos de endometriomas sintomáticos ou
-grandes(Chapron e Cols, 2002).
+\subsection{Reincidência}
 
-
-\subsection{reincidência}
-
-Morgante e Cols, 1999, relataram que os pacientes tratados com baixa dose de danazol (100 mg / dia durante 6 meses) após a cirurgia laparoscópica e seis meses de terapia com GnRH agonistas terapia reduziu a incidência de dor pélvica quando comparados com aqueles que não receberam a terapia . Especificamente, 24 meses após a cirurgia, 14 pacientes randomizados para receber tratamento com danazol, a  dor reincindio porém foi significativamente menor do que os outros 14 pacientes que não receberam qualquer tratamento.
+% Ta estranho esse paragrafo
+Morgante e Cols, 1999, relataram que os pacientes tratados com baixa
+dose de danazol, por exemplo, 100 mg por dia, durante 6 meses, após a
+cirurgia laparoscópica, e então seis meses de terapia com GnRH
+agonistas, reduziram a incidência de dor pélvica quando comparados com
+aqueles que não receberam a terapia. Especificamente, 24 meses após a
+cirurgia, os 14 pacientes escolhidos aleatoriamente para receber o
+tratamento com danazol tiveram a dor reincidida, porém foi
+significativamente menor do que os outros 14 pacientes que não
+receberam qualquer tratamento.
 
 \section{Referências} 
 
@@ -737,3 +1173,8 @@ Guo SW.Recurrence of endometriosis and its control.Hum Reprod Update. 2009 Jul-A
 
 
 \end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
