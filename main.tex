@@ -6,7 +6,9 @@
 
 \documentclass[12pt]{article} % use larger type; default would be 10pt
 
-\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[utf8]{inputenc} % set input encoding (not needed with
+                            % XeLaTeX)
+\usepackage{keyval}
 \fontfamily{uarial} \selectfont
 \renewcommand{\rmdefault}{phv}
 \renewcommand{\sfdefault}{phv}
@@ -100,7 +102,46 @@
          % otherwise the current date is printed 
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}         
-         
+
+\makeatletter
+\define@key{livroref}{pagina}{\def\pb@pagina{#1}}
+\define@key{livroref}{edicao}{\def\pb@edicao{#1}}
+
+\setkeys{livroref}{edicao=,pagina=}%
+
+\newcommand{\artigo}[5]{\textsc{#1}. \textbf{#2}%
+\if\relax\detokenize{#3}\relax%
+\else%
+. #3
+\fi%
+; #4%
+\if\relax\detokenize{#5}\relax%
+\else%
+, #5
+\fi%
+.\vspace{0,5cm}
+}
+
+% named Edição, named Pagina, 1: Autor, 2. Nome do Livro, 3. Editora,
+% 4: Local. 5: Data
+\newcommand{\livro}[6][]{%
+\begingroup%
+\setkeys{livroref}{#1}%
+\textsc{#2}. \textbf{#3}. #4.
+\if\relax\detokenize{\pb@edicao}\relax%
+\else%
+\pb@edicao.
+\fi%
+#5%
+\if\relax\detokenize{\pb@pagina}\relax%
+\else%
+, \pb@pagina p.%
+\fi%
+\vspace{0,5cm}
+\endgroup
+}
+
+\makeatother
 
 \begin{document}
 
@@ -1269,514 +1310,334 @@ casos de endometriomas sintomáticos ou grandes (CHAPRON et al., 2002).
 \section{Referências} 
 \setlength{\parindent}{0pt}
 
-\textsc{Cox, H, Henderson, L., Andersen  N., Cagliarini , G, e Ski.C}
-(2003).\textbf{Fucus group of endometriosis: Struggle, loss and the medical merry-go-round}. Internetional journal of nurseng practice , 9,2-9
+\artigo{A.G. Braundmeier and A.T. Fazleabas}{The non-human primate model of endometriosis: research and implications for fecundity}{}{2009}{}
 
-\vspace{0,5cm}
+\livro{Abrão, MS}{Endometriose: Uma Visão Contemporânea}{Revinter}{Rio de Janeiro}{2000}
 
-\textsc{Guyton}; \textbf{ Fisiologia Humana}; Sexta edição; Rio de Janeiro; Editora Guanabara Koogan, 2011; 545 p.
+\artigo{Abrao MS, Podgaec S, Filho BM, Ramos LO, Pinotti JA, de Oliveira RM}{ The use of biochemical markers in the diagnosis of pelvic endometriosis}{Hum Reprod}{1997}{}
 
-\vspace{0,5cm}
+\artigo{Abrão MS, Gonçalves MO, Dias JA Jr, Podgaec S, Chamie LP, Blasbalg R}{Comparison between clinical examination, transvaginal sonography and magnetic resonance imaging for the diagnosis of
+deep endometriosis}{Hum Reprod}{2007}{22(12):3092-7}
 
-\textsc{Guyton e Hall};\textbf{Tratado de Fisiologia Médica}; Décima primeira edição; Rio de Janeiro; Editora Elsevier, 2006; 1011 p.
+\artigo{Abrão MS, Podgaec S, Pinotti JA, de Oliveira RM}{Tumor markers
+in endometriosis}{Int J Gynaecol Obstet}{1999}{}
 
-\vspace{0,5cm}
+\artigo{Acosta AA, Buttram VC, Jr., Besch P K, Malinak LR, Franklin
+  RR, Vanderheyden JD}{A proposed classification of pelvic
+  endometriosis} {Obstet Gynecol}{1973}{42(1):19-25}
 
-\textsc{Silverthorn};\textbf{ Fisiologia humana} ; Quinta edição; São Paulo; Editora Artmed, 2010; 848 p.
+\artigo{Adamson GD, Nelson HP}{Surgical treatment of endometriosis}{Obstet Gynecol Clin North Am}{1997}{24:375– 409}
 
-\vspace{0,5cm}
+\artigo{Adolfo Pisanu, Daniela Deplano, Stefano Angioni, Rossano Ambu e Alessandro Ucceddu}{Rectal perforation from endometriosis in pregnancy: Case report and literature review, World J. Gastroenterol}{}{2010}{}
 
-\textsc{Viganò P, Somigliana E, Panina P, Rabellotti E, Vercellini P, Candiani M}. \textbf{Principles of phenomics in endometriosis}.Hum Reprod Update. 2012 May-Jun;18(3):248-59
+\artigo{Adriana Zanona da Mata e Marisa Campio Muller}{Uma análise
+  qualitativa da convivência da mulher com sua
+  endometriose}{Psicologia, saúde e doenças}{2006}{7 (1), 57-72}
 
-\vspace{0,5cm}
+\artigo{Alcázar, J. L.; Laparte, C.; Jurado, M.; López-García, G}{ The
+  role of transvaginal ultrasonography combined with color velocity
+  imaging and pulsed Doppler in the diagnosis of
+  endometrioma}{Fertility and sterility}{1997 Mar}{v67, n. 3, p. 487- 91}
 
-\textsc{Verkauf} Bs. \textbf{ Incidence, symptoms, and signs of endometriosis in fertile and infertile women}. J Fla Med Assoc. 1987
-
-\vspace{0,5cm}
-
-Kelechi E.\textsc{ Nnoaham}, Sivahami \textsc{Sivananthan}, Lone \textsc{Hummelshoj}, Crispin \textsc{Jenkinson}, Premila\textsc{ Webster}, Stephen H. \textsc{Kennedy}, and Krina T. \textsc{Zondervan}.\textbf{ Multi-centre studies of the global impact of endometriosis and the predictive value of associated symptoms}.J Endometr. 2009; 1(1): 36–45. 
-
-\vspace{0,5cm}
-
-\textsc{Kennedy S, Bergqvist A, Chapron C, D'Hooghe T, Dunselman G, Greb R, Hummelshoj L, Prentice A, Saridogan E}; \textbf{ESHRE guideline for the diagnosis and treatment of endometriosis}.Hum Reprod. 2005 Oct;20(10):2698-704. 
-
-\vspace{0,5cm}
-
-\textsc{Porth, M. C. e Matfin, G}.;\textbf{ Fisiopatologia}; Oitava edição, volume 2; Rio de
-Janeiro; Editora Guanabara Koogan, 2010; 1146 p.
-
-\vspace{0,5cm}
-
-Geraldo Brasileiro\textsc{ Filho}; \textbf{Bogliolo Patologia}; oitava edição; Rio de Janeiro; Editora Guanabara Koogan, 2011; 604 P.
-
-\vspace{0,5cm}
-
-\textsc{José Carlos de Jesus Conceição, Juraci Ghiaroni de Albuquerque e Silva} \textbf{Ginecologia fundamental}; São Paulo ; editora  Atheneu, 2005.
-
-\vspace{0,5cm}
+\artigo{American Society for Reproductive Medicine}{Revised American Society for Reproductive Medicine classification of endometriosis}{}{1996}{}
 	
+\artigo{Arruda MS, Petta CA, Abrão MS, Benetti-Pinto CL}{Time elapsed from onset of symptoms to diagnosis of endometriosis in a cohort study of Brazilian women}{Hum Reprod}{2003 Apr}{18(4):756-9}
 
-\textsc{Thomas C. King};\textbf{ Patologia}; Primeira edição ; Rio de
-janeiro; Editora Elsevier, 2007; 347 P
+\artigo{Audebert A, Bäckström T, Barlow DH, Benagiano G, Brosens I,
+  Bühler K, Donnez J, Evers JL, Pellicer A, Mettler L, et
+  al}{Endometriosis 1991: a discussion document}{Hum Reprod.}{1992
+  Mar}{7(3):432-5}
 
-\vspace{0,5cm}
+\artigo{Bazot M, Daraï E}{ Sonography and MR imaging for the
+assessment of deep pelvic endometriosis}{J Minim Invasive
+Gynecol}{2005}{}
 
-\textsc{Karp, Jason R}., \textbf{Marathon e Beyond }, 2015, Vol. 19 Issue 2, p112 e 113.
+\artigo{Bazot M, Detchev R, Cortez A, Amouyal P, Uzan S, Daraï E}{Transvaginal sonography and rectal endoscopic sonography for the assessment of pelvic endometriosis: a preliminary comparison}{Hum Reprod}{2003 Aug}{18(8):1686-92}
 
-\vspace{0,5cm}
+\artigo{Beatriz Taliberti da Costa Porto , Helizabet Salomão, Abdalla Ayrosa Ribeiro, Maria Antonieta Longo Galvão, Vanessa Gozzo Sekula, José Mendes Aldrigui, Paulo Augusto Ayrosa Ribeiro}{Histological classification and quality of life in women with endometriosis}{}{2015}{}
 
-Adriana Zanona da \textsc{Mata} e Marisa Campio \textsc{Muller};\textbf{ Uma análise qualitativa da convivência da mulher com sua endometriose}. Psicologia, saúde e doenças. 2006, 7 (1), 57-72
+\artigo{Bedaiwy MA, Falcone T, Sharma RK, Goldberg JM, Attaran M,
+  Nelson DR et al}{ Prediction of endometriosis with serum and
+  peritoneal fluid markers: a prospective controlled trial}{Hum
+  Reprod}{2002}{}
 
-\vspace{0,5cm}
+\artigo{Betul Usluogullari, corresponding author Candan Zehra Duvan, and Celil Alper Usluogullari}{Use of aromatase inhibitors in practice of gynecology}{J Ovarian Res}{2015}{}
 
-\textsc{Redwine DB}.\textbf{ The distribution of endometriosis in the pelvis by age groups and fertility}. Fertil Steril 1987; 
+\artigo{Brosens I, Benagiano G}{Is neonatal uterine bleeding involved in the pathogenesis of endometriosis as a source of stem cells?}{Fertility and Sterility}{2013}{}
 
-\vspace{0,5cm}
+\artigo{Brosens I}{Diagnosis of endometriosis}{Semin Reprod Endocrinol.}{1997}{15(3):229-33}
 
-Laura \textsc{Knabben}, Sara \textsc{Imboden}, Bernhard \textsc{Fellmann}, Konstaninos \textsc{Nirgianakis}, Annette \textsc{Kuhn}, Michael D.\textsc{ Muller}. \textbf{Urinary tract endometriosis in patients with deep infiltrating endometriosis: prevalence, symptoms, management, and proposal for a new clinical classification}, 2014.
+\artigo{Burney RO, Giudice L}{Pathogenesis and pathophysiology of endometriosis}{Fertility and Sterility}{2012}{}
 
-\vspace{0,5cm}
+\artigo{Catenacci M, Sastry S, Falcone T}{ Laparoscopic surgery for endometriosis}{Clin Obstet Gynecol}{2009}{}
 
-Lene N. \textsc{Heidemann} , Dorthe \textsc{Hartwell} , Christian H. \textsc{Heidemann} e kirsten M.\textsc{Jochumsen} ; \textbf{The relation between endometriosis and ovarian cancer – a review};Acta Obstetricia Et Gynecologica Scandinavica ;2013
+\artigo{Chamié, L. P}{ Endometriose pélvica: aspectos à ressonância magnética e correlação com laparoscopia e anatomia patológica}{S.l.]: Universidade São Paulo}{2008}{}
 
-\vspace{0,5cm}
+\artigo{Chapron C, Vercellini P, Barakat H, Vieira M}{Dubuisson JB. Management of ovarian endometriomas}{Hum Reprod Update}{2002}{8(6):591-7}
 
-Sun Mi\textsc{ Hwang}, Chung Won \textsc{Lee}, Byung Seok\textsc{ Lee}, and Joo Hyun \textsc{Park} ;\textbf{ Clinical features of thoracic endometriosis: A single center analysis}, 2015.
+\artigo{Christodoulakos G, Augoulea A, Lambrinoudaki I, Sioulas V, Creatsas G}{Pathogenesis of endometriosis: the role of defective 'immunosurveillance'}{Eur J Contracept Reprod Health Care}{2007 Sep}{12(3):194-202}
 
-\vspace{0,5cm}
+\artigo{Cohen, L. S.; Valle, R. F.; Sabbagha, R. E}{ A comparison of
+  preoperative ultrasound images of surgically proven endometriomas
+  scanned by both transabdominal and transvaginal techniques}{Journal
+  of Gynecologic Surgery}{1995 Jan}{v11, n. 1, p. 27-32}
 
-\textsc{Murphy AA} (2002) \textbf{Clinical aspects of endometriosis. Ann N Y Acad Sci} .2002.
+\artigo{Cottreau CM, Ness RB, Modugno F, Allen GO, Goodman MT}{Endometriosis and its treatment with danazol or lupron in relation to ovarian cancer}{Clin Cancer Res}{2003}{}
 
-\vspace{0,5cm}
+\artigo{Coutinho EM}{ Treatment of endometriosis with gestrinone (R-2323), a synthetic antiestrogen, antiprogesterone}{Am J Obstet Gynecol}{1982}{}
 
-\textsc{Eskenazi B, Warner M, Bonsignore L, Olive D, Samuels S, Vercellini P}. \textbf{Validation study of nonsurgical diagnosis of endometriosis}. Fertil Steril. 2001;76:929–935
+\artigo{Coutinho EM, da Silva AR, Kraft HG}{Fertility control with subdermal silastic capsules containing a new progestin (ST-1435)}{Int J Fertil}{1976}{}
 
-\vspace{0,5cm}
+\artigo{Cox, H, Henderson, L., Andersen  N., Cagliarini , G, e
+  Ski.C}{Fucus group of endometriosis: Struggle, loss and the
+  medical merry-go-round}{International journal of nurseng practice}{2003}{9,2-9}
 
-\textsc{Luisi S, Lazzeri L, Ciani V, Petraglia F}.\textbf{ Endometriosis in Italy: from cost estimates to new medical treatment}. Gynecol Endocrinol. 2009;25:734–740
+\artigo{Debrock S, De Strooper B, Vander Perre S, Hill JA, D'Hooghe
+  TM}{Tumour necrosis factor-alpha, interleukin-6 and interleukin-8 do
+  not promote adhesion of human endometrial epithelial cells to
+  mesothelial cells in a quantitative in vitro model}{Hum
+  Reprod}{2006}{}
 
-\vspace{0,5cm}
+\artigo{Dmowski WP, Kapetanakis E, Scommegna A}{Variable effects of danazol on endometriosis at four dose levels}{Obstet Gynecol}{1982}{}
 
-\textsc{Kumar S, Tiwari P, Sharma P, Goel A, Singh JP, Vijay MK}, et al.\textbf{ Urinary tract endometriosis: Review of 19 cases}. Urol Ann 2012.
+\artigo{Dogan, M}{ Transvaginal sonographic diagnosis of ovarian endometrioma}{International Journal of Gynecology e Obstetrics}{Fev. 1996}{v52, n. 2, p. 145-149}
 
-\vspace{0,5cm}
+\artigo{Eskenazi B, Warner M, Bonsignore L, Olive D, Samuels S,
+  Vercellini P}{Validation study of nonsurgical diagnosis of
+  endometriosis}{Fertil Steril}{2001}{76:929–935}
 
-\textsc{Sampson JA}. (1927) \textbf{Peritoneal endometriosis due to the
-menstrual dissemination of endometrial tissue into the
-peritoneal cavity}. Am J ObstetGynecol.
+\artigo{Fariba Almassinokiani, Alireza Almasi, Peyman Akbari, and Mahboubeh Saberifard}{Effect of Letrozole on endometriosis-related pelvic pain}{Med J Islam Repub Iran}{2014}{28: 107}
 
-\vspace{0,5cm}
+\artigo{Fedele L, Bianchi S, Raffaelli R, Portuese A}{Pre-operative assessment of bladder endometriosis}{Hum Reprod}{1997}{12:2519 –2522}
 
+\artigo{Figueira PGM, Abrão MS, Krikun G, Taylor H}{Stem cells in endometrium and their role in the pathogenesis of endometriosis}{Annals of the New York Academy of Sciences}{2011}{}
 
-\textsc{Audebert A, Bäckström T, Barlow DH, Benagiano G, Brosens I, Bühler K, Donnez J, Evers JL, Pellicer A, Mettler L}, et al.\textbf{Endometriosis 1991: a discussion document}.Hum Reprod. 1992 Mar;7(3):432-5.
+\artigo{Fleischer AC, Cullinan JW, Walsch JW}{Problem-oriented
+  gynecologic imaging with emphasis on usltrasonography}{In Fleischer
+  AC, Manning FA, Jeanty P, Romero R.(Ed.). Sonography in Obstetrics
+  and Gynecology. A.  Lange}{1996}{887}
 
-\vspace{0,5cm}
+\artigo{Francesco Antonio Viscomi, Rogério Dias, Laurival de Luca, Mauro Fernando Kürten Ihlenfeld}{Correlation Between Laparoscopic Aspects and Histologic Findings in Peritoneal Endometriotic Lesions}{Rev. Bras. Ginecol. Obstet. v.24}{2002}{}
 
-\textsc{Kitawaki J, Kado N, Ishihara H, Koshiba H, Kitaoka Y, Honjo H}.\textbf{Endometriosis: the pathophysiology as an estrogen-dependent disease}. J Steroid Biochem Mol Biol. 2002 Dec;83(1-5):149-55.
+\artigo{Gabriella Zito, Stefania Luppi, Elena Giolo, Monica
+  Martinelli, Irenev Venturin, Giovanni Di Lorenzo, and Giuseppe Ricci}{Medical Treatments for Endometriosis-Associated Pelvic Pain.Biomed Res Int}{}{2014}{}
 
-\vspace{0,5cm}
+\artigo{Gao X, Yeh YC, Outley J, Simon J, Botteman M, Spalding J}{Health-related quality of life burden of women with endometriosis: a literature review. Curr Med Res Opin}{}{2006}{}
 
-\textsc{Noble LS, Simpson ER, Johns A, Bulun SE}.\textbf{Aromatase expression in endometriosis}.J Clin Endocrinol Metab. 1996 Jan;81(1):174-9
+\artigo{Garrido N, Navarro J, Remohi J, Simon C, Pellicer
+  A}{Follicular hormonal environment and embryo quality in women with
+  endometriosis}{Hum Reprod Update}{2000}{}
 
-\vspace{0,5cm}
+\livro[edicao=Oitava edição,pagina=604]{Geraldo Brasileiro
+  Filho}{Bogliolo Patologia}{Rio de Janeiro}{Editora Guanabara
+  Koogan}{2011}
 
-\textsc{Brosens I}, \textbf{Diagnosis of endometriosis}.Semin Reprod Endocrinol. 1997;15(3):229-33
+\artigo{Guerriero, S.; Alcazar, J.; Pascual, M. et al}{ Diagnosis of the most frequent benign ovarian cysts: is ultrasonography accurate and reproducible?}{Journal of women’s health}{Abr. 2009}{v18, n. 4, p. 519-27}
 
-\vspace{0,5cm}
+\artigo{Guerriero, S.; Mais, V; Ajossa, S. et al}{The role of
+  endovaginal ultrasound in differentiating endometriomas from other
+  ovarian cysts}{Clinical and experimental obstetrics e
+  gynecology}{jan 1995}{}
 
-\textsc{rosens I, Puttemans P, Campo R, Gordts S}. \textbf{Diagnosis of endometriosis: Pelvic endoscopy and imaging techniques}. Best Practice and Research Clinical Obstetrics and Gynaecology. 2004;18(2):285–303.
+\artigo{Guo SW}{Recurrence of endometriosis and its control}{Hum Reprod Update}{2009 Jul-Aug}{15(4):441-61}
 
-\vspace{0,5cm}
+\artigo{Gurunath S, Pandian Z, Richard AR, Bhattacharya S}{Defining infertility a systematic review of prevalence studies}{Hum Reprod Update}{2011}{}
 
-\textsc{American Society for Reproductive Medicine};\textbf{Revised American Society for Reproductive Medicine classification of endometriosis}: 1996
+\livro[pagina=545,edicao=Sexta edição]{Guyton}{Fisiologia Humana}{Rio de
+  Janeiro}{Editora Guanabara Koogan}{2011}
 
-\vspace{0,5cm}
+\livro[edicao=Décima primeira edição,pagina=1011]{Guyton e Hall}{Tratado de Fisiologia Médica}{Rio de Janeiro}{Editora Elsevier}{2006}
 
-Beatriz Taliberti da Costa \textsc{Porto} , Helizabet \textsc{Salomão}, Abdalla Ayrosa \textsc{Ribeiro} , Maria Antonieta Longo \textsc{Galvão} , Vanessa Gozzo \textsc{Sekula} , José Mendes \textsc{Aldrigui} , Paulo Augusto Ayrosa \textsc{Ribeiro}.
-\textbf{Histological classification and quality of life in women with endometriosis} .2015
+\artigo{Hornstein MD, Yuzpe AA, Burry KA, Heinrichs LR, Buttram VL Jr, Orwoll ES}{Prospective randomized double-blind trial of 3 versus 6 months of nafarelin therapy for endometriosis associated pelvic pain}{Fertil Steril}{1995 May}{63(5):955-62}
 
-\vspace{0,5cm}
+\artigo{Huirne JA, Lambalk CB}{Gonadotropin-releasing-hormone-receptor antagonists}{Lancet}{2001}{}
 
-\textsc{Martin DC, Hubert GD, Vander Zwaag R, el-Zeky FA}. \textbf{Laparoscopic appearances of peritoneal endometriosis}.Fertil Steril 1989; 51:63-7
+\artigo{Jacobson TZ, Barlow DH, Koninckx PR, Olive D, Farquhar C}{ Laparoscopic surgery for subfertility associated with endometriosis}{Cochrane Database Syst Rev}{2002}{(4):CD001398}
 
-\vspace{0,5cm}
+\artigo{Jessica Fourquet, Xin Gao, Diego Zavala, Juan C. Orengo, Sonia Abac, Abigail Ruiz, Joaquín Laboy, and Idhalizv Flores}{Patients’ report on how endometriosis affects health, work, and daily life}{}{2011}{}
 
-Francesco Antonio \textsc{Viscomi}, Rogério \textsc{Dias}, Laurival de \textsc{Luca}, Mauro Fernando Kürten \textsc{Ihlenfeld}. \textbf{Correlation Between Laparoscopic Aspects and Histologic Findings in Peritoneal Endometriotic Lesions}. Rev. Bras. Ginecol. Obstet. v.24 2002 .
+\livro[edicao=Primeira edição,pagina=102]{José Carlos de Jesus
+  Conceição, Juraci Ghiaroni de Albuquerque e Silva}{Ginecologia
+  Fundamental}{São Paulo}{Editora Atheneu}{2005}
 
-\vspace{0,5cm}
+\artigo{Júlia Kefalás Troncon, Ana Carolina Tagliatti Zani, Andrea
+  Duarte Damasceno Vieira, Omero Benedicto Poli-Neto, Antônio Alberto Nogueira, and Júlio César Rosa-e-Silva}{Endometriosis in a Patient with Mayer-Rokitansky-Küster-Hauser Syndrome}{Case Rep Obstet Gynecol}{2014}{}
 
-\textsc{Burney RO, Giudice L}.\textbf{ Pathogenesis and pathophysiology of endometriosis}. Fertility and Sterility. 2012;
+\livro[edicao=Volume 19 Issue 2, pagina=112p e 113]{Karp, Jason
+  R}{Marathon e Beyond}{Choice}{2015}
 
-\vspace{0,5cm}
+\artigo{Kato K}{Stem cells in human normal endometrium and endometrial cancer cells: characterization of side population cells}{Kaohsiung Journal of Medical Sciences}{2012}{}
 
-\textsc{Kato K}. \textbf{Stem cells in human normal endometrium and endometrial cancer cells: characterization of side population cells}. Kaohsiung Journal of Medical Sciences. 2012
+\artigo{Kelechi E. Nnoaham, Sivahami Sivananthan, Lone Hummelshoj, Crispin Jenkinson, Premila Webster, Stephen H. Kennedy, and Krina T. Zondervan}{Multi-centre studies of the global impact of endometriosis and the predictive value of associated symptoms}{J Endometr}{2009}{1(1): 36–45}
 
-\vspace{0,5cm}
+\artigo{Kennedy S, Bergqvist A, Chapron C, D'Hooghe T, Dunselman G,
+  Greb R, Hummelshoj L, Prentice A, Saridogan E}{ESHRE guideline for
+  the diagnosis and treatment of endometriosis}{Hum
+  Reprod}{2005 Oct}{20(10):2698-704}
 
-\textsc{Figueira PGM, Abrão MS, Krikun G, Taylor H}.\textbf{ Stem cells in endometrium and their role in the pathogenesis of endometriosis}. Annals of the New York Academy of Sciences. 2011
+\artigo{Kinkel K1, Chapron C, Balleyguier C, Fritel X, Dubuisson JB, Moreau JF}{Magnetic resonance imaging characteristics of deep endometriosis}{Hum Reprod}{1999}{14:1080 –1086}
 
-\vspace{0,5cm}
+\artigo{Kitawaki J, Kado N, Ishihara H, Koshiba H, Kitaoka Y, Honjo
+  H}{Endometriosis: the pathophysiology as an estrogen-dependent
+  disease}{J Steroid Biochem Mol Biol.}{2002 Dec}{83(1-5):149-55}
 
-\textsc{Oliveira FR, Cruz CD, del Puerto HL, Vilamil QTMF, Reis FM, Camargos AF}.\textbf{ Stem cells: are they the answer to the puzzling etiology of endometriosis?} Histology and Histopathology. 2012
+\artigo{Kocakoc, E; Bhatt, S; Dogra, V}{Endometriosis}{Ultrasound Clinics}{jul. 2008}{v3, n. 3, p. 399-414}
 
-\vspace{0,5cm}
+\artigo{Koninckx PR, Martin DC}{Deep endometriosis: a consequence of infiltration or retraction or possibly adenomyosis externa?}{Fertil Steril}{1992 Nov}{58(5):924-8}
 
-\textsc{Masuda H, Matsuzaki Y, Hiratsu E}, et al.\textbf{ Stem cell-like properties of the endometrial side population: implication in endometrial regeneration}. PLoS ONE. 2010.
+\artigo{Kumar S, Tiwari P, Sharma P, Goel A, Singh JP, Vijay MK, et
+  al}{Urinary tract endometriosis: Review of 19 cases}{Urol
+  Ann}{2012}{}
 
-\vspace{0,5cm}
+\artigo{Kyama CM, Mihalyi A, Simsa P, Mwenda JM, Meuleman C, D'Hooghe TM}{ Non-steroidal targets in the diagnosis and treatment of endometriosis}{Curr Med Chem}{2008}{}
 
-\textsc{Brosens I, Benagiano G}. \textbf{Is neonatal uterine bleeding involved in the pathogenesis of endometriosis as a source of stem cells?} Fertility and Sterility. 2013.
+\artigo{Kyama CM, Overbergh L, Debrock S, Valckx D, Vander Perre S, Meuleman C, Mihalyi A, Mathieu C, Mwenda JM, D'Hooghe TM}{Increased peritoneal and endometrial gene expression of biologically relevant cytokines and growth factors during menstrual phase in women with endometriosis}{Fertil Steril}{2006}{}
 
-\vspace{0,5cm}
+\artigo{Laura Knabben, Sara Imboden, Bernhard Fellmann, Konstaninos
+  Nirgianakis, Annette Kuhn, Michael D. Muller}{Urinary tract
+  endometriosis in patients with deep infiltrating endometriosis:
+  prevalence, symptoms, management, and proposal for a new clinical
+  classification}{}{2014}{}
 
-\textsc{Ulukus M, Arici A}.\textbf{Immunology of endometriosis}. Minerva Ginecol. 2005 Jun;57(3):237-48.
+\artigo{Lebovic DI, Mueller MD, Taylor RN}{Immunobiology of
+  endometriosis}{Fertil Steril}{2001}{}
 
-\vspace{0,5cm}
+\artigo{Lene N. Heidemann, Dorthe Hartwell, Christian H. Heidemann e
+  Kirsten M. Jochumsen}{The relation between endometriosis and ovarian
+  cancer – a review}{Acta Obstetricia Et Gynecologica
+  Scandinavica}{2013}{}
 
-\textsc{Sinaii N, Cleary SD, Ballweg ML, Nieman LK, Stratton P}.\textbf{High rates of autoimmune and endocrine disorders, fibromyalgia, chronic fatigue syndrome and atopic diseases among women with endometriosis: a survey analysis}.Hum Reprod. 2002 Oct;17(10):2715-24.
+\artigo{Leticia Muñoz Hernando, Jose L Muñoz Gonzalez, Laura Marqueta
+  Marques, Carmen Alvarez Conejo, Álvaro Tejerizo García, Gregorio
+  Lopez Gonzalez, Emilia Villegas Muñoz, Angel Martin Jimenez, and
+  Jesús S Jiménez López}{Endometriosis: alternative methods of medical treatment}{Int J Womens Health}{2015}{7: 595–603}
 
-\vspace{0,5cm}
+\artigo{Luisi S, Lazzeri L, Ciani V, Petraglia F}{Endometriosis in
+  Italy: from cost estimates to new medical treatment}{Gynecol
+  Endocrinol}{2009}{25:734–740}
 
-\textsc{Christodoulakos G, Augoulea A, Lambrinoudaki I, Sioulas V, Creatsas G}. \textbf{Pathogenesis of endometriosis: the role of defective 'immunosurveillance'}.Eur J Contracept Reprod Health Care. 2007 Sep;12(3):194-202.
+\artigo{Marc Bazot, Emile Darai, Roula Hourani, Isabelle Thomassin,
+  Annie Cortez, Serge Uzan, Jean-Noe l Buy, MD}{Deep Pelvic
+  Endometriosis: MR Imaging for Diagnosis and Prediction of Extension
+  of Disease}{Radiology}{2004}{}
 
-\vspace{0,5cm}
+\artigo{Martin DC, Hubert GD, Vander Zwaag R, el-Zeky FA}{Laparoscopic appearances of peritoneal endometriosis}{Fertil Steril}{1989}{51:63-7}
 
-\textsc{Nisolle M, Donnez J.} \textbf{"Peritoneal endometriosis, ovarian endometriosis, and
-adenomyotic nodules of the rectovaginal septum are three different entities."}
-Fertil Steril. 1997;68(4):585-96.
+\artigo{Masuda H, Matsuzaki Y, Hiratsu E, et al}{Stem cell-like properties of the endometrial side population: implication in endometrial regeneration}{PLoS ONE}{2010}{}
 
-\vspace{0,5cm}
+\artigo{Matthew Latham Macer, M.D. and Hugh S. Taylor}{Endometriosis and Infertility: A review of the pathogenesis and treatment of endometriosis-associated infertility}{}{2013}{}
 
-\textsc{Redwine DB}.\textbf{Age-related evolution in color appearance of endometriosis}.Fertil Steril. 1987 Dec;48(6):1062-3.
+\artigo{Menada, MV; Remorgida, V; Abbamonte, L.H. et al}{ Does trans-vaginal ultrasonography combined with water-contrast in the rectum aid in the diagnosis of rectovaginal endometriosis infiltrating the bowel?}{Human Reproduction}{2008}{23(5): 1069–1075}
 
-\vspace{0,5cm}
+\artigo{Mihalyi A, Kyama CM, Simsa P, Debrock S, Mwenda JM, D'Hooghe TM}{Role of immunologic factors in the development of endometriosis: indications for treatment strategies}{Therapy}{2005}{}
 
-\textsc{Koninckx PR, Martin DC};\textbf{Deep endometriosis: a consequence of infiltration or retraction or possibly adenomyosis externa?}Fertil Steril. 1992 Nov;58(5):924-8.
+\artigo{Moore J, Copley S, Morris J, Lindsell D, Golding S, Kennedy S. A}{systematic review of the accuracy of ultrasound in the diagnosis of endometriosis}{Ultrasound Obstet Gynecol}{2002}{}
 
-\vspace{0,5cm}
+\artigo{Murphy AA}{Clinical aspects of endometriosis}{Ann N Y Acad
+  Sci}{2002}{}
 
-\textsc{Acosta AA, Buttram VC, Jr., Besch P K, Malinak LR, Franklin RR,
-Vanderheyden JD}.\textbf{ "A proposed classification of pelvic endometriosis."}
-Obstet Gynecol. 1973;42(1):19-25.
+\artigo{Nisolle M, Donnez J.}{Peritoneal endometriosis, ovarian endometriosis, and
+adenomyotic nodules of the rectovaginal septum are three different entities.}{Fertil Steril}{1997}{68(4):585-96}
 
-\vspace{0,5cm}
+\artigo{Nissolle, M; Donnez, J}{ Peritoneal endometriosis, ovarian
+  endometriosis, and adenomyotic nodules of the rectovaginal septum
+  are three different entities}{Fertility and sterility}{out 1997}{68, n. 4, p. 585-96}
 
+\artigo{Noble LS, Simpson ER, Johns A, Bulun SE}{Aromatase expression
+  in endometriosis}{J Clin Endocrinol Metab}{1996 Jan}{81(1):174-9}
 
-\textsc{Arruda MS, Petta CA, Abrão MS, Benetti-Pinto CL}.\textbf{Time elapsed from onset of symptoms to diagnosis of endometriosis in a cohort study of Brazilian women}. Hum Reprod. 2003 Apr;18(4):756-9.
+\artigo{Nácul AP, Spritzer PM}{Current aspects on diagnosis and treatment of
+endometriosis}{Rev Bras Ginecol Obstet}{2010}{}
 
-\vspace{0,5cm}
+\livro[edicao=Primeira edição]{Nyberg, D. A.; Hill, L. M.; Bohm-Vélez, M.; Mendelson, E. B}{Ultrasonografia Transvaginal}{Rio de Janeiro}{Revinter}{1996}
 
-\textsc{Hornstein MD, Yuzpe AA, Burry KA, Heinrichs LR, Buttram VL Jr, Orwoll ES}. \textbf{Prospective randomized double-blind trial of 3 versus 6 months of nafarelin therapy for endometriosis associated pelvic pain}.Fertil Steril. 1995 May;63(5):955-62.
+\artigo{O'Shaughnessy A, Check JH, Nowroozi K, Lurie D}{CA 125 levels measured in different phases of the menstrual cycle in screening for endometriosis}{Obstet Gynecol}{1993}{}
 
-\vspace{0,5cm}
+\artigo{Oliveira FR, Cruz CD, del Puerto HL, Vilamil QTMF, Reis FM, Camargos AF}{Stem cells: are they the answer to the puzzling etiology of endometriosis?}{Histology and Histopathology}{2012}{}
 
-Stephen\textsc{ Kennedy} , Agneta\textsc{ Bergqvist}  , Charles \textsc{Chapron}  , Thomas\textsc{ D’Hooghe}  , Gerard\textsc{ Dunselman}  , Robert\textsc{ Greb}  , Lone\textsc{ Hummelshoj}  , Andrew \textsc{Prentice}  , Ertan\textsc{ Saridogan} .\textbf{ESHRE guideline for the diagnosis and treatment of endometriosis}. 2005.
+\artigo{Othman Eel-D, Hornung D, Salem HT, Khalifa EA, El-Metwally TH,
+  Al-Hendy A}{ Serum cytokines as biomarkers for nonsurgicalprediction
+  of endometriosis}{Eur J Obstet Gynecol Reprod Biol}{2008}{}
 
-\vspace{0,5cm}
+\livro[edicao=Primeira edição, pagina=129p-139]{Pastore, A. R}{Interpretaçao Clínica de Imagem Ultra-sonográfica: Obstetrícia}{Ginecologia}{São Paulo, SP}{Sarvier}{1999}
 
-\textsc{Bazot M, Detchev R, Cortez A, Amouyal P, Uzan S, Daraï E}.\textbf{Transvaginal sonography and rectal endoscopic sonography for the assessment of pelvic endometriosis: a preliminary comparison}.Hum Reprod. 2003 Aug;18(8):1686-92.
+\artigo{Patel, M. D.; Feldstein, V. A; Chen, D. C.; Lipson, S. D.; Filly, R. A}{Endometriomas: diagnostic performance of US}{Radiology}{mar. 1999}{v210, n. 3, p. 739-45}
 
-\vspace{0,5cm}
+\artigo{Pizzo A, Salmeri FM, Ardita FV, Sofo V, Tripepi M, Marsico
+  S}{Behaviour of cytokine levels in serum and peritoneal fluid of
+  women with endometriosis}{In: Gynecol Obstet
+  Invest. Vol. 54. Switzerland: 2003 S. Karger AG, Basel}{2002}{}
 
-Marc\textsc{ Bazot}, Emile \textsc{Darai}, Roula\textsc{ Hourani}, Isabelle \textsc{Thomassin}, Annie\textsc{ Cortez}, Serge\textsc{ Uzan}, 
-Jean-Noe l\textsc{ Buy}, MD\textbf{Deep Pelvic Endometriosis: MR Imaging for Diagnosis and Prediction of Extension of Disease }
+\livro[edicao=Oitava edição,pagina=1146]{Porth, M. C. e Matfin,
+  G}{Fisiopatologia}{Volume 2}{Rio de Janeiro}{Editora Guanabara
+  Koogan}{2010}
 
-\vspace{0,5cm}
+\artigo{Redwine DB}{Age-related evolution in color appearance of endometriosis}{Fertil Steril}{1987 Dec}{48(6):1062-3}
 
+\artigo{Redwine DB}{The distribution of endometriosis in the pelvis by
+  age groups and fertility}{Fertil Steril}{1987}{}
 
-\textsc{Moore J, Copley S, Morris J, Lindsell D, Golding S, Kennedy S. A} .\textbf{systematic review of the accuracy of ultrasound in the diagnosis of endometriosis}. Ultrasound Obstet Gynecol. 2002 .
+\artigo{Roseau G, Dumontier I, Palazzo L, Chapron C, Dousset B,
+Chaussade S, et al}{ Rectosigmoid endometriosis: endoscopic
+ultrasound features and clinical implications}{Endoscopy}{2000 }{}
 
-\vspace{0,5cm}
+\artigo{Rosens I, Puttemans P, Campo R, Gordts S}{Diagnosis of endometriosis: Pelvic endoscopy and imaging techniques}{Best Practice and Research Clinical Obstetrics and Gynaecology}{2004}{18(2):285–303}
 
-\textsc{Fedele L, Bianchi S, Raffaelli R, Portuese A}. \textbf{Pre-operative assessment of bladder endometriosis}. Hum Reprod 1997; 12:2519 –2522.
+\artigo{S. Kundu, J. Wildgrube, C. Schippert, P. Hillemanns, and I. Brandes}{Supporting and Inhibiting Factors When Coping with Endometriosis From the Patients Perspective}{Geburtshilfe Frauenheilkd}{2015}{}
 
-\vspace{0,5cm}
+\artigo{Sampson JA}{Peritoneal endometriosis due to the menstrual
+  dissemination of endometrial tissue into the peritoneal cavity}{Am J
+  ObstetGynecol}{1927}
 
-\textsc{Kinkel K1, Chapron C, Balleyguier C, Fritel X, Dubuisson JB, Moreau JF}.. \textbf{Magnetic resonance imaging characteristics of deep endometriosis}. Hum Reprod 1999; 14:1080 –1086.
+\artigo{Schenken RS, Asch RH, Williams RF, Hodgen GD}{Etiology of
+  infertility in monkeys with endometriosis: luteinized unruptured
+  follicles, luteal phase defects, pelvic adhesions, and spontaneous
+  abortions}{Fertil Steril}{1984}{}
 
-\vspace{0,5cm}
+\artigo{Schrager S, Falleroni J, Edgoose J}{Evaluation and treatment of endometriosis}{Am Fam Physician}{2013}{}
 
-\textsc{Fleischer AC, Cullinan JW, Walsch JW}.\textbf{ Problem-oriented gynecologic imaging with emphasis on usltrasonography}. In Fleischer AC, Manning FA, Jeanty P, Romero R.(Ed.). Sonography in Obstetrics and Gynecology. A.
-Lange. 1996;887.
+\artigo{Sepulcri R de P, do Amaral VF}{Depressive symptoms, anxiety,
+  and quality of life in women with pelvic endometriosis}{ Eur J
+Obstet Gynecol Reprod Biol}{2009}{}
 
-\vspace{0,5cm}
+\livro[edicao=Quinta edição,pagina=848]{Silverthorn}{Fisiologia humana}{São Paulo}{Editora Artmed}{2010}
 
-\textsc{Schenken RS, Asch RH, Williams RF, Hodgen GD}.\textbf{ Etiology of infertility in
-monkeys with endometriosis: luteinized unruptured follicles, luteal phase
-defects, pelvic adhesions, and spontaneous abortions}. Fertil Steril 1984;
+\artigo{Sinaii N, Cleary SD, Ballweg ML, Nieman LK, Stratton P}{High rates of autoimmune and endocrine disorders, fibromyalgia, chronic fatigue syndrome and atopic diseases among women with endometriosis: a survey analysis}{Hum Reprod}{2002 Oct}{17(10):2715-24}
 
-\vspace{0,5cm}
+\artigo{Sinaii N, Plumb K, Cotton L, Lambert A, Kennedy S, Zondervan K, Stratton P}{Differences in characteristics among 1,000 women with endometriosis based on extent of disease}{Fertil Steril}{2008}{}
 
-\textsc{Garrido N, Navarro J, Remohi J, Simon C, Pellicer A}.\textbf{Follicular hormonal
-environment and embryo quality in women with endometriosis}. Hum
-Reprod Update 2000.
+\artigo{Stephen Kennedy, Agneta Bergqvist, Charles Chapron, Thomas
+  D’Hooghe, Gerard Dunselman, Robert Greb, Lone Hummelshoj, Andrew
+  Prentice, Ertan Saridogan}{ESHRE guideline for the diagnosis and treatment of endometriosis}{}{2005}{}
 
-\vspace{0,5cm}
+\artigo{Sun Mi Hwang, Chung Won Lee, Byung Seok Lee, and Joo Hyun
+  Park}{Clinical features of thoracic endometriosis: A single center
+  analysis}{}{2015}{}
 
-\textsc{Pizzo A, Salmeri FM, Ardita FV, Sofo V, Tripepi M, Marsico S}. \textbf{Behaviour of
-cytokine levels in serum and peritoneal fluid of women with endometriosis}.
-In: Gynecol Obstet Invest. Vol. 54. Switzerland: 2003 S. Karger AG, Basel;
-2002.
+\artigo{Süha Akpınar, Güliz Yılmaz, corresponding author and Emre Çelebioglu}{A rare cyclic recurrent hematuria case; bladder endometriosis}{Quant Imaging Med Surg}{2015}{}
 
-\vspace{0,5cm}
+\livro[edicao=Primeira edição,pagina=347]{Thomas
+  C. King}{Patologia}{Rio de Janeiro}{Editora Elsevier}{2007}
 
-\textsc{Lebovic DI, Mueller MD, Taylor RN}.\textbf{ Immunobiology of endometriosis}. Fertil
-Steril 2001.
-
-\vspace{0,5cm}
-
-\textsc{Abrão MS, Gonçalves MO, Dias JA Jr, Podgaec S, Chamie LP, Blasbalg R}. \textbf{Comparison between clinical examination, transvaginal sonography and magnetic resonance imaging for the diagnosis of
-deep endometriosis}. Hum Reprod. 2007;22(12):3092-7
-
-\vspace{0,5cm}
-
-\textsc{Gurunath S, Pandian Z, Richard AR, Bhattacharya S}. \textbf{Defining infertility a systematic review of prevalence studies}. Hum Reprod Update. 2011.
-
-\vspace{0,5cm}
-
-
-\textsc{Sepulcri R de P, do Amaral VF}.
-\textbf{Depressive symptoms, anxiety, and quality
-of life in women with pelvic endometriosis}.
-Eur J Obstet Gynecol Reprod Biol.
-2009.
-
-\vspace{0,5cm}
-
-
-\textsc{Nácul AP, Spritzer PM}. \textbf{Current aspects on diagnosis and treatment of
-endometriosis}. Rev Bras Ginecol Obstet. 2010.
-
-\vspace{0,5cm}
-
-
-\textsc{Sinaii N, Plumb K, Cotton L, Lambert A, Kennedy S, Zondervan K, Stratton P}. \textbf{Differences in characteristics among 1,000 women with endometriosis based on extent of disease}. Fertil Steril. 2008.
-
-\vspace{0,5cm}
-
-\textsc{Jacobson TZ, Barlow DH, Koninckx PR, Olive D, Farquhar C}.\textbf{ Laparoscopic surgery for subfertility associated with endometriosis}. Cochrane Database Syst Rev. 2002;(4):CD001398.
-
-\vspace{0,5cm}
-
-
-\textsc{Chapron C, Vercellini P, Barakat H, Vieira M}, \textbf{Dubuisson JB. Management of ovarian endometriomas}. Hum Reprod Update. 2002;8(6):591-7.
-
-\textsc{Adamson GD, Nelson HP}. \textbf{Surgical treatment of endometriosis}. Obstet Gynecol Clin North Am 1997; 24:375– 409. 
-
-\vspace{0,5cm}
-
-\textsc{O'Shaughnessy A, Check JH, Nowroozi K, Lurie D}.
-\textbf{CA 125 levels measured in different phases of the menstrual cycle in screening for endometriosis}. Obstet Gynecol 1993.
-
-\vspace{0,5cm}
-
-\textsc{Abrao MS, Podgaec S, Filho BM, Ramos LO, Pinotti JA, de Oliveira RM}.\textbf{ The use of biochemical markers in the diagnosis of pelvic endometriosis}. Hum Reprod 1997;
-
-\vspace{0,5cm}
-
-\textsc{Debrock S, De Strooper B, Vander Perre S, Hill JA, D'Hooghe TM}.
-\textbf{Tumour necrosis factor-alpha, interleukin-6 and interleukin-8 do not promote adhesion of human endometrial epithelial cells to mesothelial cells in a quantitative in vitro model}. Hum Reprod 2006.
-
-\vspace{0,5cm}
-
-\textsc{Kyama CM, Mihalyi A, Simsa P, Mwenda JM, Meuleman C, D'Hooghe TM}.\textbf{ Non-steroidal targets in the diagnosis and treatment of endometriosis}. Curr Med Chem 2008;
-
-\vspace{0,5cm}
-
-\textsc{Kyama CM, Overbergh L, Debrock S, Valckx D, Vander Perre S, Meuleman C, Mihalyi A, Mathieu C, Mwenda JM, D'Hooghe TM}.
-\textbf{Increased peritoneal and endometrial gene expression of biologically relevant cytokines and growth factors during menstrual phase in women with endometriosis}. Fertil Steril 2006.
-
-\vspace{0,5cm}
-
-\textsc{Mihalyi A, Kyama CM, Simsa P, Debrock S, Mwenda JM, D'Hooghe TM}.
-\textbf{Role of immunologic factors in the development of endometriosis: indications for treatment strategies}. Therapy 2005.
-
-\vspace{0,5cm}
-
-\textsc{Dmowski WP, Kapetanakis E, Scommegna A}. \textbf{Variable effects of danazol on endometriosis at four dose levels}. Obstet Gynecol 1982;
-
-\vspace{0,5cm}
-
-\textsc{ Coutinho EM}.\textbf{ Treatment of endometriosis with gestrinone (R-2323), a synthetic antiestrogen, antiprogesterone}. Am J Obstet Gynecol 1982; 
-
-\vspace{0,5cm}
- 
-\textsc{Coutinho EM, da Silva AR, Kraft HG}. \textbf{Fertility control with subdermal silastic capsules containing a new progestin (ST-1435)}. Int J Fertil 1976.
-
-\vspace{0,5cm}
-
-\textsc{Othman Eel-D, Hornung D, Salem HT, Khalifa EA, El-Metwally
-TH, Al-Hendy A}.\textbf{ Serum cytokines as biomarkers for nonsurgicalprediction of endometriosis}. Eur J Obstet Gynecol Reprod Biol.
-2008.
-
-\vspace{0,5cm}
-
-\textsc{Bedaiwy MA, Falcone T, Sharma RK, Goldberg JM, Attaran M,
-Nelson DR et al} (2002)\textbf{ Prediction of endometriosis with serum
-and peritoneal fluid markers: a prospective controlled trial}. Hum
-Reprod . 2002.
-
-\vspace{0,5cm}
-
-\textsc{Thomassin I, Bazot M, Detchev R, Barranger E, Cortez A,
-Darai E}.\textbf{ Symptoms before and after surgical removal of
+\artigo{Thomassin I, Bazot M, Detchev R, Barranger E, Cortez A,
+Darai E}{ Symptoms before and after surgical removal of
 colorectal endometriosis that are assessed by magnetic
-resonance imaging and rectal endoscopic sonography}. Am J
-Obstet Gynecol. 2004 .
+resonance imaging and rectal endoscopic sonography}{Am J
+Obstet Gynecol}{2004}{}
 
-\vspace{0,5cm}
+\artigo{Ulukus M, Arici A}{Immunology of endometriosis}{Minerva Ginecol}{2005 Jun}{57(3):237-48}
 
-\textsc{Roseau G, Dumontier I, Palazzo L, Chapron C, Dousset B,
-Chaussade S, et al}.\textbf{ Rectosigmoid endometriosis: endoscopic
-ultrasound features and clinical implications}. Endoscopy.
-2000 .
+\artigo{Verkauf Bs.}{Incidence, symptoms, and signs of endometriosis in fertile and infertile women}{J Fla Med Assoc}{1987}{}
 
-\vspace{0,5cm}
+\artigo{Viganò P, Somigliana E, Panina P, Rabellotti E, Vercellini P,
+  Candiani M}{Principles of phenomics in endometriosis}{Hum Reprod Update}{May-Jun,
+  2012}{18(3):248-59}
 
-\textsc{Bazot M, Daraï E}.\textbf{ Sonography and MR imaging for the
-assessment of deep pelvic endometriosis}. J Minim Invasive
-Gynecol. 2005.
+\artigo{Volpi, E.; Grandis, T. De; Zuccaro, G.; Vista, A. La; Sismondi, P}{ Role of transvaginal sonography in the detection of endometriomata}{Journal of clinical ultrasoundR: JCU}{1995}{v23, n. 3, p. 163-7}
 
-\vspace{0,5cm}
+\artigo{Wellbery C}{Diagnosis and treatment of endometriosis. American Family Physician}{}{1999}{60(6):1753–1762}
 
-\textsc{Menada, MV; Remorgida, V; Abbamonte, L.H. et al}.\textbf{ Does trans-vaginal ultrasonography combined with water-contrast in the rectum aid in the diagnosis of rectovaginal endometriosis infiltrating the bowel?} Human Reproduction, 23(5): 1069–1075, 2008.
-
-\vspace{0,5cm}
-
-\textsc{Abrão MS, Podgaec S, Pinotti JA, de Oliveira RM}. \textbf{Tumor markers
-in endometriosis}. Int J Gynaecol Obstet. 1999.
-
-\vspace{0,5cm}
-
-\textsc{Xavier P, Belo L, Beires J, Rebelo I, Martinez-de-Oliveira J, Lunet N, Barros H}.
-\textbf{Serum levels of VEGF and TNF-alpha and their association with C-reactive protein in patients with endometriosis}. Arch Gynecol Obstet 2006;
-
-\vspace{0,5cm}
-
-Júlia Kefalás\textsc{ Troncon}, Ana Carolina Tagliatti\textsc{ Zani}, Andrea Duarte Damasceno\textsc{ Vieira}, Omero Benedicto\textsc{ Poli-Neto}, Antônio Alberto \textsc{Nogueira}, and Júlio César\textsc{ Rosa-e-Silva} .\textbf{Endometriosis in a Patient with Mayer-Rokitansky-Küster-Hauser Syndrome} . Case Rep Obstet Gynecol. 2014
-
-\vspace{0,5cm}
-
-\textsc{Catenacci M, Sastry S, Falcone T}.\textbf{ Laparoscopic surgery for endometriosis}. Clin Obstet Gynecol. 2009
-
-\vspace{0,5cm}
-
-Matthew Latham\textsc{ Macer}, M.D. and Hugh S.\textsc{ Taylor}. \textbf{Endometriosis and Infertility: A review of the pathogenesis and treatment of endometriosis-associated infertility} 2013.
-
-\vspace{0,5cm}
-
-\textsc{A.G. Braundmeier and A.T. Fazleabas}. \textbf{The non-human primate model of endometriosis: research and implications for fecundity}. 2009.
-
-\vspace{0,5cm}
-
-Jessica\textsc{ Fourquet}, Xin\textsc{ Gao}, Diego\textsc{ Zavala}, Juan C. \textsc{Orengo}, Sonia\textsc{ Abac}, Abigail\textsc{ Ruiz}, Joaquín\textsc{ Laboy}, and Idhalizv{ Flores}.\textbf{ Patients’ report on how endometriosis affects health, work, and daily life}, 2011.
-
-\vspace{0,5cm}
-
-\textsc{Adolfo Pisanu, Daniela Deplano, Stefano Angioni, Rossano Ambu e Alessandro Ucceddu}. \textbf{Rectal perforation from endometriosis in pregnancy: Case report and literature review, World J. Gastroenterol}. 2010 .
-
-\vspace{0,5cm}
-
-\textsc{Gao X, Yeh YC, Outley J, Simon J, Botteman M, Spalding J}. \textbf{Health-related quality of life burden of women with endometriosis: a literature review. Curr Med Res Opin}. 2006.
-
-\vspace{0,5cm}
-
-\textsc{S. Kundu, J. Wildgrube, C. Schippert, P. Hillemanns, and I. Brandes}.\textbf{Supporting and Inhibiting Factors When Coping with Endometriosis From the Patients Perspective}. Geburtshilfe Frauenheilkd. 2015.
-
-\vspace{0,5cm}
-
-Süha\textsc{ Akpınar}, Güliz \textsc{Yılmaz},corresponding author and Emre Çelebioglu.\textbf{ A rare cyclic recurrent hematuria case}; bladder endometriosis.Quant Imaging Med Surg. 2015 .
-
-\vspace{0,5cm}
-
-\textsc{Abrão, M. S}.\textbf{ Endometriose: Uma Visão Contemporânea}. Rio de Janeiro: Revinter, 2000.
-
-\vspace{0,5cm}
-
-\textsc{Alcázar, J. L.; Laparte, C.; Jurado, M.; López-García, G}.\textbf{ The role of transvaginal ultrasonography combined with color velocity imaging and pulsed Doppler in the diagnosis of endometrioma}. Fertility and sterility, v. 67, n. 3, p. 487- 91, mar. 1997.
-
-\vspace{0,5cm}
-
-\textsc{Chamié, L. P}.\textbf{ Endometriose pélvica: aspectos à ressonância magnética e correlação com laparoscopia e anatomia patológica}. [S.l.]: Universidade São Paulo, 2008.
-
-\vspace{0,5cm}
-
-\textsc{Cohen, L. S.; Valle, R. F.; Sabbagha, R. E}.\textbf{ A comparison of preoperative ultrasound images of surgically proven endometriomas scanned by both transabdominal and transvaginal techniques}. Journal of Gynecologic Surgery, v. 11, n. 1, p. 27-32, jan. 1995.
-
-\vspace{0,5cm}
-
-\textsc{Dogan, M}.\textbf{ Transvaginal sonographic diagnosis of ovarian endometrioma}. International Journal of Gynecology e Obstetrics, v. 52, n. 2, p. 145-149, fev. 1996.
-
-\vspace{0,5cm}
-
-\textsc{Guerriero, S.; Alcazar, J.; Pascual, M. et al}.\textbf{ Diagnosis of the most frequent benign ovarian cysts: is ultrasonography accurate and reproducible?} Journal of women’s health, v. 18, n. 4, p. 519-27, abr. 2009.
-
-\vspace{0,5cm}
-
-\textsc{Guerriero, S.; Mais, V; Ajossa, S. et al}.\textbf{ The role of endovaginal ultrasound in differentiating endometriomas from other ovarian cysts}. Clinical and experimental obstetrics e gynecology. [S.l: s.n.]. Disponível em: . jan 1995.
-
-\vspace{0,5cm}
-
-\textsc{Huirne JA, Lambalk CB}.\textbf{Gonadotropin-releasing-hormone-receptor antagonists}.Lancet. 2001.
-
-\vspace{0,5cm}
-
-\textsc{Kocakoc, E; Bhatt, S; Dogra, V}.\textbf{ Endometriosis. Ultrasound Clinics}, v. 3, n. 3, p. 399-414, jul. 2008.
-
-\vspace{0,5cm}
-
-\textsc{Nissolle, M; Donnez, J}.\textbf{ Peritoneal endometriosis, ovarian endometriosis, and adenomyotic nodules of the rectovaginal septum are three different entities}. Fertility and sterility, v. 68, n. 4, p. 585-96, out. 1997.
-
-\vspace{0,5cm}
-
-\textsc{Nyberg, D. A.; Hill, L. M.; Bohm-Vélez, M.; Mendelson, E. B}.\textbf{ Ultrasonografia Transvaginal}. Primeira B ed. Rio de Janeiro: Revinter, 1996.
-
-\vspace{0,5cm}
-
-\textsc{Pastore, A. R}.\textbf{ Interpretaçao Clínica de Imagem Ultra-sonográfica: Obstetrícia} - Ginecologia. Primeira ed. São Paulo, SP: Sarvier, 1999. p. 129-139.
-
-\vspace{0,5cm}
-
-\textsc{Patel, M. D.; Feldstein, V. A; Chen, D. C.; Lipson, S. D.; Filly, R. A}. \textbf{Endometriomas: diagnostic performance of US}. Radiology, v. 210, n. 3, p. 739-45, mar. 1999.
-
-\vspace{0,5cm}
-
-\textsc{Volpi, E.; Grandis, T. De; Zuccaro, G.; Vista, A. La; Sismondi, P}.\textbf{ Role of transvaginal sonography in the detection of endometriomata}. Journal of clinical ultrasoundR: JCU, v. 23, n. 3, p. 163-7, 1995..  
-
-\vspace{0,5cm}
-
-\textsc{Wellbery C}.\textbf{ Diagnosis and treatment of endometriosis. American Family Physician}. 1999;60(6):1753–1762.
-
-\vspace{0,5cm}
-
-Leticia Muñoz \textsc{Hernando}, Jose L Muñoz \textsc{Gonzalez}, Laura Marqueta \textsc{Marques}, Carmen Alvarez \textsc{Conejo}, Álvaro Tejerizo \textsc{García}, Gregorio Lopez \textsc{Gonzalez}, Emilia Villegas \textsc{Muñoz}, Angel Martin \textsc{Jimenez}, and Jesús S Jiménez \textsc{López}. \textbf{Endometriosis: alternative methods of medical treatment.Int J Womens Health}. 2015; 7: 595–603. 
-
-\vspace{0,5cm}
-
-\textsc{Schrager S, Falleroni J, Edgoose J}.\textbf{ Evaluation and treatment of endometriosis}.Am Fam Physician. 2013.
-
-\vspace{0,5cm}
-
-Gabriella\textsc{ Zito}, Stefania \textsc{Luppi}, Elena \textsc{Giolo}, Monica \textsc{Martinelli}, Irenev{ Venturin}, Giovanni \textsc{Di Lorenzo}, and Giuseppe \textsc{Ricci} .\textbf{Medical Treatments for Endometriosis-Associated Pelvic Pain.Biomed Res Int}. 2014.
-
-\vspace{0,5cm}
-
-\textsc{Cottreau CM, Ness RB, Modugno F, Allen GO, Goodman MT}. \textbf{Endometriosis and its treatment with danazol or lupron in relation to ovarian cancer}. Clin Cancer Res. 2003.
-
-\vspace{0,5cm}
-
-\textsc{Fariba} Almassinokiani, \textsc{Alireza} Almasi, \textsc{Peyman} Akbari, and Mahboubeh Saberifard.\textbf{Effect of Letrozole on endometriosis-related pelvic pain}.Med J Islam Repub Iran. 2014; 28: 107. 
-
-\vspace{0,5cm}
-
-\textsc{Betul} Usluogullari,corresponding author Candan Zehra Duvan, and Celil Alper Usluogullari.\textbf{Use of aromatase inhibitors in practice of gynecology}.J Ovarian Res. 2015.
-
-\vspace{0,5cm}
-
-\textsc{Guo} SW.\textbf{Recurrence of endometriosis and its control}.Hum Reprod Update. 2009 Jul-Aug;15(4):441-61.
-
-
-
+\artigo{Xavier P, Belo L, Beires J, Rebelo I, Martinez-de-Oliveira J, Lunet N, Barros H}{Serum levels of VEGF and TNF-alpha and their association with C-reactive protein in patients with endometriosis}{Arch Gynecol Obstet}{2006}{}
 
 \end{document}
 
